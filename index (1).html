@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toby AI — Built for Australian Business</title>
+<meta name="description" content="A new kind of financial operating system. Built for Australian businesses. Coming soon.">
+<meta property="og:title" content="Toby AI — Built for Australian Business">
+<meta property="og:description" content="A new kind of financial operating system. Built for Australian businesses. Coming soon.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tobyai.io">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Toby AI — Built for Australian Business">
+<meta name="twitter:description" content="A new kind of financial operating system. Built for Australian businesses. Coming soon.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink: #0e1520;
+  --ink2: #1a2535;
+  --teal: #2a9d8f;
+  --teal-dim: #1e7268;
+  --teal-glow: rgba(42,157,143,0.15);
+  --teal-line: rgba(42,157,143,0.3);
+  --fog: rgba(255,255,255,0.045);
+  --fog2: rgba(255,255,255,0.07);
+  --muted: rgba(255,255,255,0.38);
+  --soft: rgba(255,255,255,0.62);
+  --white: #ffffff;
+  --serif: 'DM Serif Display', Georgia, serif;
+  --sans: 'DM Sans', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; height: 100%; }
+
+body {
+  font-family: var(--sans);
+  background: var(--ink);
+  color: var(--white);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ── Background ── */
+.bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-layer::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center,
+    rgba(42,157,143,0.13) 0%,
+    rgba(42,157,143,0.04) 40%,
+    transparent 70%
+  );
+}
+
+.bg-layer::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center,
+    rgba(30,50,80,0.6) 0%,
+    transparent 70%
+  );
+}
+
+/* Grain overlay */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 128px;
+}
+
+/* ── Layout ── */
+.wrapper {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Nav ── */
+nav {
+  padding: 32px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: fadeDown 0.8s ease both;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+}
+
+.logo-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, var(--teal) 0%, #2a7ca5 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 17px;
+  color: white;
+  letter-spacing: -0.5px;
+  box-shadow: 0 0 20px rgba(42,157,143,0.35);
+}
+
+.logo-text {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 17px;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: -0.2px;
+}
+
+.logo-text em {
+  font-style: normal;
+  color: var(--teal);
+}
+
+.nav-right {
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.3px;
+}
+
+/* ── Hero ── */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 6% 80px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 32px;
+  animation: fadeUp 0.9s 0.1s ease both;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--teal-line);
+}
+
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(38px, 5.5vw, 72px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  color: var(--white);
+  max-width: 820px;
+  margin-bottom: 28px;
+  animation: fadeUp 0.9s 0.2s ease both;
+}
+
+h1 em {
+  font-style: italic;
+  color: #7dd4cc;
+}
+
+.subhead {
+  font-size: clamp(15px, 1.8vw, 18px);
+  font-weight: 300;
+  color: var(--soft);
+  max-width: 480px;
+  line-height: 1.7;
+  margin-bottom: 56px;
+  animation: fadeUp 0.9s 0.3s ease both;
+}
+
+/* ── Pillars ── */
+.pillars {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 64px;
+  animation: fadeUp 0.9s 0.4s ease both;
+}
+
+.pillar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--fog);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 100px;
+  padding: 7px 16px;
+  font-size: 12.5px;
+  font-weight: 400;
+  color: var(--soft);
+  letter-spacing: 0.2px;
+  backdrop-filter: blur(8px);
+}
+
+.pillar-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+
+/* ── Form ── */
+.form-wrap {
+  width: 100%;
+  max-width: 460px;
+  animation: fadeUp 0.9s 0.5s ease both;
+}
+
+.form-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.form-wrap input,
+.form-wrap select {
+  width: 100%;
+  padding: 13px 16px;
+  background: var(--fog2);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 10px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--white);
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  -webkit-appearance: none;
+}
+
+.form-wrap input::placeholder {
+  color: rgba(255,255,255,0.28);
+}
+
+.form-wrap input:focus,
+.form-wrap select:focus {
+  border-color: var(--teal-line);
+  background: rgba(42,157,143,0.06);
+}
+
+.form-wrap select {
+  color: rgba(255,255,255,0.28);
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.3)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.form-wrap select.has-value {
+  color: var(--white);
+}
+
+.form-wrap select option {
+  background: #1a2535;
+  color: white;
+}
+
+.form-full {
+  margin-bottom: 10px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background: var(--teal);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  margin-top: 4px;
+  box-shadow: 0 4px 24px rgba(42,157,143,0.25);
+}
+
+.btn-submit:hover {
+  background: var(--teal-dim);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 32px rgba(42,157,143,0.35);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+.btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-note {
+  margin-top: 12px;
+  font-size: 11.5px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.6;
+}
+
+.error-msg {
+  font-size: 12px;
+  color: #f87171;
+  margin-bottom: 8px;
+  text-align: center;
+  display: none;
+}
+
+/* ── Success ── */
+.success-wrap {
+  display: none;
+  text-align: center;
+  max-width: 400px;
+  animation: fadeUp 0.6s ease both;
+}
+
+.success-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(42,157,143,0.15);
+  border: 1px solid var(--teal-line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 22px;
+}
+
+.success-wrap h3 {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.success-wrap p {
+  font-size: 14px;
+  color: var(--soft);
+  line-height: 1.7;
+}
+
+/* ── Footer ── */
+footer {
+  position: relative;
+  z-index: 2;
+  padding: 28px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  animation: fadeUp 1s 0.7s ease both;
+}
+
+.footer-left {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.footer-right {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-right a {
+  font-size: 12px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-right a:hover {
+  color: var(--teal);
+}
+
+/* ── Secondary positioning line ── */
+.secondary-line {
+  font-size: 13.5px;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.1px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-style: italic;
+  animation: fadeUp 0.9s 0.42s ease both;
+}
+
+/* ── Divider line accent ── */
+.divider {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, var(--teal-line), transparent);
+  margin: 0 auto 48px;
+  animation: fadeUp 0.9s 0.35s ease both;
+}
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 560px) {
+  nav { padding: 24px 5%; }
+  .nav-right { display: none; }
+  .hero { padding: 40px 5% 60px; }
+  .form-grid { grid-template-columns: 1fr; }
+  footer { flex-direction: column; gap: 12px; text-align: center; }
+  .footer-right { justify-content: center; }
+  h1 { font-size: 36px; }
+}
+</style>
+</head>
+<body>
+
+<div class="bg-layer"></div>
+<div class="grain"></div>
+
+<div class="wrapper">
+
+  <nav>
+    <a href="#" class="logo">
+      <div class="logo-mark">T</div>
+      <span class="logo-text">Toby<em>AI</em></span>
+    </a>
+    <span class="nav-right">Brisbane, Australia</span>
+  </nav>
+
+  <section class="hero">
+
+    <div class="eyebrow">Coming Soon</div>
+
+    <h1>Finance, finally <em>intelligent.</em></h1>
+
+    <p class="subhead">
+      A new kind of financial operating system, built from the ground up for Australian business. Your numbers. Your compliance. Your control.
+    </p>
+
+    <div class="pillars">
+      <div class="pillar"><span class="pillar-dot"></span>AI-native</div>
+      <div class="pillar"><span class="pillar-dot"></span>ATO compliant</div>
+      <div class="pillar"><span class="pillar-dot"></span>Australian data hosting</div>
+      <div class="pillar"><span class="pillar-dot"></span>$1M – $100M revenue</div>
+    </div>
+
+    <p class="secondary-line">Built for businesses your current software can't keep up with.</p>
+
+    <div class="divider"></div>
+
+    <!-- Form -->
+    <div class="form-wrap" id="signup-form">
+      <div class="form-label">Register your interest</div>
+
+      <div class="form-grid">
+        <input type="text" id="f-name" placeholder="Your name">
+        <input type="text" id="f-biz" placeholder="Business name">
+      </div>
+
+      <div class="form-full">
+        <input type="email" id="f-email" placeholder="Work email address">
+      </div>
+
+      <div class="form-grid">
+        <select id="f-rev" onchange="markSelected(this)">
+          <option value="" disabled selected>Annual revenue</option>
+          <option>$1M – $5M</option>
+          <option>$5M – $10M</option>
+          <option>$10M – $25M</option>
+          <option>$25M – $50M</option>
+          <option>$50M – $100M</option>
+          <option>$100M+</option>
+        </select>
+        <select id="f-industry" onchange="markSelected(this)">
+          <option value="" disabled selected>Industry</option>
+          <option>Construction &amp; Trade</option>
+          <option>Property &amp; Real Estate</option>
+          <option>Professional Services</option>
+          <option>Manufacturing</option>
+          <option>Wholesale &amp; Distribution</option>
+          <option>Hospitality &amp; Tourism</option>
+          <option>Health &amp; Aged Care</option>
+          <option>Technology</option>
+          <option>Accounting Practice</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="error-msg" id="form-error">Please fill in your name, email, and revenue range.</div>
+
+      <button class="btn-submit" id="form-btn" onclick="submitForm()">Request Early Access →</button>
+
+      <p class="form-note">No spam. No commitment. We'll reach out when your access opens.</p>
+    </div>
+
+    <!-- Success -->
+    <div class="success-wrap" id="success-msg">
+      <div class="success-icon">✓</div>
+      <h3>You're on the list.</h3>
+      <p>We'll be in touch when early access opens.<br>Keep an eye on your inbox.</p>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="footer-left">© 2026 Toby AI Pty Ltd</div>
+    <div class="footer-right">
+      <a href="/cdn-cgi/l/email-protection#3e565b5252517e4a515c475f57105751"><span class="__cf_email__" data-cfemail="b8d0ddd4d4d7f8ccd7dac1d9d196d1d7">[email&#160;protected]</span></a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </footer>
+
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  var GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwKahbBF02NvIaMZado7vuzlCKYe0BUHbqxTnwidfGEl94B6kqm3dUxrC9yy1NVPlPF5A/exec';
+
+  function markSelected(el) {
+    if (el.value) el.classList.add('has-value');
+    else el.classList.remove('has-value');
+  }
+
+  function submitForm() {
+    var name  = document.getElementById('f-name').value.trim();
+    var biz   = document.getElementById('f-biz').value.trim();
+    var email = document.getElementById('f-email').value.trim();
+    var rev   = document.getElementById('f-rev').value;
+    var ind   = document.getElementById('f-industry').value;
+    var errEl = document.getElementById('form-error');
+
+    errEl.style.display = 'none';
+
+    if (!name || !email || !email.includes('@') || !rev) {
+      errEl.style.display = 'block';
+      return;
+    }
+
+    var btn = document.getElementById('form-btn');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    var payload = {
+      name: name,
+      business: biz || '—',
+      email: email,
+      revenue: rev,
+      industry: ind || '—',
+      submitted: new Date().toISOString()
+    };
+
+    fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(function() { showSuccess(); })
+    .catch(function() { showSuccess(); });
+  }
+
+  function showSuccess() {
+    document.getElementById('signup-form').style.display = 'none';
+    var s = document.getElementById('success-msg');
+    s.style.display = 'block';
+  }
+
+  // Allow Enter key on form
+  document.addEventListener('keydown', fun
