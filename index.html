@@ -4,213 +4,103 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Toby AI — AI Financial OS for Australian SMBs</title>
-
-<!-- Open Graph -->
+<meta name="description" content="Toby AI is an AI-native financial operating system built for Australian businesses with $1M-$100M revenue. Compliance, cash flow, payroll, and reporting — automated.">
 <meta property="og:title" content="Toby AI — AI Financial OS for Australian SMBs">
-<meta property="og:description" content="Australia's first AI-native financial operating system for SMBs with $5M–$100M revenue. Automates compliance, cash flow, payroll, and reporting.">
+<meta property="og:description" content="Australia's first AI-native ERP for SMEs. Built for compliance from day one.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://tobyai.io/">
+<meta property="og:url" content="https://tobyai.io">
 <meta property="og:locale" content="en_AU">
 <meta property="og:image" content="https://tobyai.io/toby_og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Toby AI — AI-native financial operating system for Australian SMBs">
-
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Toby AI — AI Financial OS for Australian SMBs">
-<meta name="twitter:description" content="Australia's first AI-native financial operating system for SMBs with $5M–$100M revenue. Automates compliance, cash flow, payroll, and reporting.">
+<meta name="twitter:description" content="Australia's first AI-native ERP for SMEs. Built for compliance from day one.">
 <meta name="twitter:image" content="https://tobyai.io/toby_og.png">
 <meta name="twitter:image:alt" content="Toby AI — AI-native financial operating system for Australian SMBs">
-
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --navy: #1a2535;
-    --navy2: #1e2e42;
-    --teal: #2a9d8f;
-    --teal2: #21867a;
-    --teal-light: #e8f4f2;
-    --accent: #264653;
-    --text: #2d3748;
-    --muted: #64748b;
-    --border: #e2eaef;
-    --white: #ffffff;
-    --bg: #f9fbfc;
-    --radius: 12px;
+    --navy: #1a2535; --navy2: #1e2e42; --teal: #2a9d8f; --teal2: #21867a;
+    --teal-light: #e8f4f2; --accent: #264653; --text: #2d3748; --muted: #64748b;
+    --border: #e2eaef; --white: #ffffff; --bg: #f9fbfc; --radius: 12px;
     --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
   }
   html { scroll-behavior: smooth; }
   body { font-family: var(--font); color: var(--text); background: var(--white); line-height: 1.6; }
-
-  nav {
-    position: fixed; top: 0; width: 100%; z-index: 100;
-    background: rgba(26,37,53,0.97); backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 60px;
-  }
+  nav { position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(26,37,53,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 60px; }
   .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .logo-mark {
-    width: 32px; height: 32px; border-radius: 8px;
-    background: linear-gradient(135deg, #2a9d8f, #3a7ca5);
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 800; font-size: 16px; color: white;
-  }
+  .logo-mark { width: 32px; height: 32px; border-radius: 8px; background: linear-gradient(135deg, #2a9d8f, #3a7ca5); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; color: white; }
   .logo-text { font-weight: 700; font-size: 18px; color: white; letter-spacing: -0.3px; }
   .logo-text span { color: var(--teal); }
   nav a.nav-link { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px; margin-left: 28px; transition: color 0.2s; }
   nav a.nav-link:hover { color: white; }
-  .nav-cta {
-    margin-left: 28px; background: var(--teal); color: white; border: none;
-    padding: 8px 18px; border-radius: 8px; font-size: 14px; font-weight: 600;
-    cursor: pointer; text-decoration: none; transition: background 0.2s;
-  }
+  .nav-cta { margin-left: 28px; background: var(--teal); color: white; border: none; padding: 8px 18px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none; transition: background 0.2s; }
   .nav-cta:hover { background: var(--teal2); }
-
-  .hero {
-    background: linear-gradient(160deg, #1a2535 0%, #1e3347 60%, #162535 100%);
-    padding: 140px 5% 100px; text-align: center; position: relative; overflow: hidden;
-  }
-  .hero::before {
-    content: ''; position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
-    width: 700px; height: 700px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(42,157,143,0.1) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(42,157,143,0.12); border: 1px solid rgba(42,157,143,0.25);
-    color: #5abfb3; border-radius: 20px; padding: 5px 14px;
-    font-size: 13px; font-weight: 600; margin-bottom: 28px; letter-spacing: 0.3px;
-  }
-  .hero h1 {
-    font-size: clamp(30px, 4.5vw, 54px); font-weight: 800; color: white;
-    line-height: 1.15; letter-spacing: -1px; margin-bottom: 20px;
-  }
+  .hero { background: linear-gradient(160deg, #1a2535 0%, #1e3347 60%, #162535 100%); padding: 140px 5% 100px; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -80px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(42,157,143,0.1) 0%, transparent 70%); pointer-events: none; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(42,157,143,0.12); border: 1px solid rgba(42,157,143,0.25); color: #5abfb3; border-radius: 20px; padding: 5px 14px; font-size: 13px; font-weight: 600; margin-bottom: 28px; letter-spacing: 0.3px; }
+  .hero h1 { font-size: clamp(30px, 4.5vw, 54px); font-weight: 800; color: white; line-height: 1.15; letter-spacing: -1px; margin-bottom: 20px; }
   .hero h1 em { color: #5abfb3; font-style: normal; }
-  .hero p {
-    font-size: clamp(15px, 1.8vw, 18px); color: rgba(255,255,255,0.58);
-    max-width: 600px; margin: 0 auto 40px;
-  }
+  .hero p { font-size: clamp(15px, 1.8vw, 18px); color: rgba(255,255,255,0.58); max-width: 600px; margin: 0 auto 40px; }
   .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-  .btn-primary {
-    background: var(--teal); color: white; border: none;
-    padding: 13px 26px; border-radius: 9px; font-size: 15px; font-weight: 700;
-    cursor: pointer; text-decoration: none; transition: all 0.2s; display: inline-block;
-  }
+  .btn-primary { background: var(--teal); color: white; border: none; padding: 13px 26px; border-radius: 9px; font-size: 15px; font-weight: 700; cursor: pointer; text-decoration: none; transition: all 0.2s; display: inline-block; }
   .btn-primary:hover { background: var(--teal2); transform: translateY(-1px); }
-  .btn-ghost {
-    background: transparent; color: rgba(255,255,255,0.75);
-    border: 1px solid rgba(255,255,255,0.18);
-    padding: 13px 26px; border-radius: 9px; font-size: 15px; font-weight: 600;
-    cursor: pointer; text-decoration: none; transition: all 0.2s; display: inline-block;
-  }
+  .btn-ghost { background: transparent; color: rgba(255,255,255,0.75); border: 1px solid rgba(255,255,255,0.18); padding: 13px 26px; border-radius: 9px; font-size: 15px; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.2s; display: inline-block; }
   .btn-ghost:hover { border-color: rgba(255,255,255,0.4); color: white; }
   .hero-sub { margin-top: 18px; font-size: 13px; color: rgba(255,255,255,0.35); }
-
-  .stats-bar {
-    background: var(--teal-light); border-top: 1px solid #cde4e0; border-bottom: 1px solid #cde4e0;
-    padding: 26px 5%; display: flex; justify-content: center; gap: 56px; flex-wrap: wrap;
-  }
+  .stats-bar { background: var(--teal-light); border-top: 1px solid #cde4e0; border-bottom: 1px solid #cde4e0; padding: 26px 5%; display: flex; justify-content: center; gap: 56px; flex-wrap: wrap; }
   .stat { text-align: center; }
   .stat-num { font-size: 26px; font-weight: 800; color: var(--accent); letter-spacing: -0.5px; }
   .stat-label { font-size: 12px; color: var(--muted); margin-top: 2px; }
-
   section { padding: 76px 5%; }
-  .section-tag {
-    display: inline-block; background: var(--teal-light); color: var(--teal2);
-    font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
-    padding: 4px 12px; border-radius: 20px; margin-bottom: 14px;
-  }
+  .section-tag { display: inline-block; background: var(--teal-light); color: var(--teal2); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; }
   h2 { font-size: clamp(22px, 3vw, 34px); font-weight: 800; letter-spacing: -0.4px; margin-bottom: 10px; color: var(--navy); }
   .section-intro { font-size: 16px; color: var(--muted); max-width: 520px; margin-bottom: 44px; }
-
   .features { background: white; }
   .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
-  .feature-card {
-    border: 1px solid var(--border); border-radius: var(--radius);
-    padding: 24px; transition: all 0.2s; background: var(--bg);
-  }
+  .feature-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; transition: all 0.2s; background: var(--bg); }
   .feature-card:hover { border-color: var(--teal); box-shadow: 0 4px 20px rgba(42,157,143,0.09); transform: translateY(-2px); background: white; }
-  .feat-icon {
-    width: 40px; height: 40px; border-radius: 10px;
-    background: var(--teal-light); display: flex; align-items: center; justify-content: center;
-    font-size: 18px; margin-bottom: 12px;
-  }
+  .feat-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--teal-light); display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 12px; }
   .feature-card h3 { font-size: 14px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
   .feature-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
-
   .how { background: var(--bg); }
   .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
   .step { text-align: center; padding: 0 12px; }
-  .step-num {
-    width: 44px; height: 44px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--teal), #3a7ca5);
-    color: white; font-weight: 800; font-size: 17px;
-    display: flex; align-items: center; justify-content: center; margin: 0 auto 14px;
-  }
+  .step-num { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--teal), #3a7ca5); color: white; font-weight: 800; font-size: 17px; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
   .step h3 { font-size: 15px; font-weight: 700; margin-bottom: 7px; color: var(--navy); }
   .step p { font-size: 13.5px; color: var(--muted); }
-
   .early-access { background: linear-gradient(160deg, #1a2535, #1e3347); color: white; text-align: center; }
   .early-access h2 { color: white; }
   .early-access .section-intro { color: rgba(255,255,255,0.55); margin-left: auto; margin-right: auto; }
   .tiers { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 44px; }
-  .tier {
-    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-    border-radius: var(--radius); padding: 18px 22px; text-align: left; min-width: 195px;
-  }
+  .tier { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 18px 22px; text-align: left; min-width: 195px; }
   .tier.featured { border-color: rgba(42,157,143,0.5); background: rgba(42,157,143,0.08); }
   .tier-name { font-size: 11px; font-weight: 700; color: #5abfb3; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 6px; }
   .tier-offer { font-size: 15px; font-weight: 700; color: white; margin-bottom: 4px; }
   .tier-detail { font-size: 12px; color: rgba(255,255,255,0.45); }
   .signup-form { max-width: 480px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .signup-form input, .signup-form select {
-    width: 100%; padding: 12px 15px;
-    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 8px; font-size: 14px; color: white;
-    outline: none; transition: border 0.2s; font-family: var(--font);
-  }
+  .signup-form input, .signup-form select { width: 100%; padding: 12px 15px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; font-size: 14px; color: white; outline: none; transition: border 0.2s; font-family: var(--font); }
   .signup-form input::placeholder { color: rgba(255,255,255,0.35); }
   .signup-form input:focus, .signup-form select:focus { border-color: var(--teal); }
   .signup-form select option { background: #1e2e42; color: white; }
-  .form-submit {
-    background: var(--teal); color: white; border: none;
-    padding: 13px; border-radius: 8px; font-size: 15px; font-weight: 700;
-    cursor: pointer; transition: background 0.2s; width: 100%;
-  }
+  .form-submit { background: var(--teal); color: white; border: none; padding: 13px; border-radius: 8px; font-size: 15px; font-weight: 700; cursor: pointer; transition: background 0.2s; width: 100%; }
   .form-submit:hover { background: var(--teal2); }
   .form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
   .form-note { font-size: 11.5px; color: rgba(255,255,255,0.3); margin-top: 2px; }
   .error-msg { font-size: 12px; color: #f87171; display: none; }
-  .success-msg {
-    display: none; background: rgba(42,157,143,0.15); border: 1px solid rgba(42,157,143,0.4);
-    border-radius: 10px; padding: 20px; color: white; font-size: 15px; max-width: 480px; margin: 0 auto;
-  }
-
-  footer {
-    background: #111b27; color: rgba(255,255,255,0.35);
-    text-align: center; padding: 24px 5%; font-size: 13px;
-    border-top: 1px solid rgba(255,255,255,0.05);
-  }
+  .success-msg { display: none; background: rgba(42,157,143,0.15); border: 1px solid rgba(42,157,143,0.4); border-radius: 10px; padding: 20px; color: white; font-size: 15px; max-width: 480px; margin: 0 auto; }
+  footer { background: #111b27; color: rgba(255,255,255,0.35); text-align: center; padding: 24px 5%; font-size: 13px; border-top: 1px solid rgba(255,255,255,0.05); }
   footer a { color: #5abfb3; text-decoration: none; }
-
   @media (max-width: 800px) { .steps { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 600px) {
-    .form-row { grid-template-columns: 1fr; }
-    .stats-bar { gap: 28px; }
-    nav a.nav-link { display: none; }
-  }
+  @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .stats-bar { gap: 28px; } nav a.nav-link { display: none; } }
 </style>
 </head>
 <body>
-
 <nav>
-  <a href="#" class="logo">
-    <div class="logo-mark">T</div>
-    <span class="logo-text">Toby<span>AI</span></span>
-  </a>
+  <a href="#" class="logo"><div class="logo-mark">T</div><span class="logo-text">Toby<span>AI</span></span></a>
   <div style="display:flex;align-items:center">
     <a href="#product" class="nav-link">Product</a>
     <a href="#early-access" class="nav-link">Early Access</a>
@@ -221,18 +111,18 @@
 <section class="hero">
   <div class="hero-badge">🇦🇺 Australia's first AI-native ERP for SMEs</div>
   <h1>The <em>AI Financial OS</em><br>your business has been waiting for</h1>
-  <p>Toby is an intelligent financial operating system built for Australian businesses with $5M–$100M revenue and 10–200 staff — automating compliance, cash flow, payroll, and reporting so your team can focus on growth.</p>
+  <p>Toby is an intelligent financial operating system built for Australian businesses with $1M–$100M revenue and up to 200 staff, automating compliance, cash flow, payroll, and reporting so your team can focus on growth.</p>
   <div class="hero-actions">
     <a href="#early-access" class="btn-primary">Join Early Access →</a>
     <a href="#product" class="btn-ghost">See How It Works</a>
   </div>
-  <p class="hero-sub">Beta launching in 6 months · 100 beta spots available · Free for 3 months</p>
+  <p class="hero-sub">Beta launching in 6 months · 100 beta spots available · Free for 6 months</p>
 </section>
 
 <div class="stats-bar">
-  <div class="stat"><div class="stat-num">17+</div><div class="stat-label">AI Agents working in parallel</div></div>
-  <div class="stat"><div class="stat-num">$5M–$100M</div><div class="stat-label">Revenue sweet spot</div></div>
-  <div class="stat"><div class="stat-num">10–200</div><div class="stat-label">Employee sweet spot</div></div>
+  <div class="stat"><div class="stat-num">20+</div><div class="stat-label">AI Agents working in parallel</div></div>
+  <div class="stat"><div class="stat-num">$1M–$100M</div><div class="stat-label">Revenue sweet spot</div></div>
+  <div class="stat"><div class="stat-num">Up to 200</div><div class="stat-label">Employee sweet spot</div></div>
   <div class="stat"><div class="stat-num">100%</div><div class="stat-label">ATO / ASIC compliant</div></div>
   <div class="stat"><div class="stat-num">AU</div><div class="stat-label">Data hosted in Australia</div></div>
 </div>
@@ -240,58 +130,18 @@
 <section class="features" id="product">
   <div class="section-tag">The Product</div>
   <h2>Everything your finance team needs.<br>Nothing they don't.</h2>
-  <p class="section-intro">A full-stack AI-native ERP — every module built for Australian compliance from day one.</p>
+  <p class="section-intro">A full-stack AI-native ERP with 31 modules, built for Australian compliance from day one. Designed for construction complexity first.</p>
   <div class="features-grid">
-    <div class="feature-card">
-      <div class="feat-icon">🤖</div>
-      <h3>17+ AI Agents</h3>
-      <p>Specialist agents for reconciliation, AP/AR, payroll, forecasting, BAS/GST, and more — working quietly in the background.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feat-icon">📊</div>
-      <h3>Financial Intelligence</h3>
-      <p>Proactive nightly insights and on-demand analysis. Ask anything in plain English — get board-ready answers instantly.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feat-icon">🏦</div>
-      <h3>Bank Feeds & Reconciliation</h3>
-      <p>Transactions categorised, matched, and reconciled automatically. Exceptions flagged for human review only.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feat-icon">📋</div>
-      <h3>BAS, GST & Compliance</h3>
-      <p>Automated BAS preparation, PAYG withholding, super, and TPAR — handled end to end.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feat-icon">👥</div>
-      <h3>Payroll Integration</h3>
-      <p>STP2-ready payroll. Pay runs, leave, entitlements, and compliance in one place.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feat-icon">📂</div>
-      <h3>AP, AR & Document Intelligence</h3>
-      <p>OCR invoice capture, automated approvals, AR follow-ups, and a debt collection agent that never sleeps.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feat-icon">🏗️</div>
-      <h3>Fixed Assets & Inventory</h3>
-      <p>Asset registers and FIFO inventory tracking built directly into the ledger.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feat-icon">📁</div>
-      <h3>Project Costing & Quoting</h3>
-      <p>Job costing, timesheets, resource management, and revenue recognition.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feat-icon">💸</div>
-      <h3>Cash Flow Forecasting</h3>
-      <p>Rolling cash flow forecasts powered by AI — surfacing risks and opportunities before they become problems.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feat-icon">🔒</div>
-      <h3>Security & Audit Trail</h3>
-      <p>AES-256, TLS 1.3, RBAC, and a full immutable audit trail — your data hosted in Australia.</p>
-    </div>
+    <div class="feature-card"><div class="feat-icon">🤖</div><h3>20+ AI Agents</h3><p>Specialist agents for reconciliation, AP/AR, payroll, forecasting, BAS/GST, estimating, and more, working quietly in the background.</p></div>
+    <div class="feature-card"><div class="feat-icon">📊</div><h3>Financial Intelligence</h3><p>Proactive nightly insights and on-demand analysis. Ask anything in plain English, get board-ready answers instantly.</p></div>
+    <div class="feature-card"><div class="feat-icon">🏦</div><h3>Bank Feeds & Reconciliation</h3><p>Transactions categorised, matched, and reconciled automatically. Exceptions flagged for human review only.</p></div>
+    <div class="feature-card"><div class="feat-icon">📋</div><h3>BAS, GST & Compliance</h3><p>Automated BAS preparation, PAYG withholding, super (Payday Super ready), TPAR, and payroll tax by state.</p></div>
+    <div class="feature-card"><div class="feat-icon">👥</div><h3>Payroll Integration</h3><p>STP2-ready payroll with Payday Super compliance. Pay runs, leave, entitlements, and award interpretation in one place.</p></div>
+    <div class="feature-card"><div class="feat-icon">📂</div><h3>AP, AR & Document Intelligence</h3><p>OCR invoice capture, automated approvals, AR follow-ups, client portal, and a debt collection agent that never sleeps.</p></div>
+    <div class="feature-card"><div class="feat-icon">🏗️</div><h3>Construction Ready</h3><p>Progress claims, retention, subcontractor management, tender register, defects tracking, and estimating built in.</p></div>
+    <div class="feature-card"><div class="feat-icon">📁</div><h3>Project Costing & Quoting</h3><p>Job costing, WIP, utilisation, timesheets, resource management, and AASB 15 revenue recognition.</p></div>
+    <div class="feature-card"><div class="feat-icon">💸</div><h3>Cash Flow Forecasting</h3><p>Rolling 13-week cash flow forecasts powered by AI, surfacing risks and opportunities before they become problems.</p></div>
+    <div class="feature-card"><div class="feat-icon">🔒</div><h3>Security & Audit Trail</h3><p>AES-256, TLS 1.3, RBAC, and a full immutable audit trail. Your data hosted in Australia on Azure.</p></div>
   </div>
 </section>
 
@@ -299,29 +149,13 @@
   <div style="text-align:center">
     <div class="section-tag">How It Works</div>
     <h2>Two layers. Complete confidence.</h2>
-    <p class="section-intro" style="margin-left:auto;margin-right:auto;text-align:center">A deterministic rules engine handles every financial calculation. AI sits above it — adding intelligence without ever touching your ledger.</p>
+    <p class="section-intro" style="margin-left:auto;margin-right:auto;text-align:center">A deterministic rules engine handles every financial calculation. AI sits above it, adding intelligence without ever touching your ledger.</p>
   </div>
   <div class="steps">
-    <div class="step">
-      <div class="step-num">1</div>
-      <h3>Connect Your Business</h3>
-      <p>Link bank accounts, import your chart of accounts, and set up your team with role-based access in minutes.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <h3>Rules Engine Handles Compliance</h3>
-      <p>All financial calculations, journal entries, and ATO compliance logic run deterministically — no AI inference on your numbers.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <h3>AI Works in the Background</h3>
-      <p>17+ specialist agents monitor, reconcile, forecast, and flag exceptions — never writing directly to your ledger.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">4</div>
-      <h3>You Stay in Control</h3>
-      <p>Review AI recommendations, approve exceptions, and ask questions in plain English. Toby surfaces insight — you make the call.</p>
-    </div>
+    <div class="step"><div class="step-num">1</div><h3>Connect Your Business</h3><p>Link bank accounts, import your chart of accounts, and set up your team with role-based access in minutes.</p></div>
+    <div class="step"><div class="step-num">2</div><h3>Rules Engine Handles Compliance</h3><p>All financial calculations, journal entries, and ATO compliance logic run deterministically. No AI inference on your numbers.</p></div>
+    <div class="step"><div class="step-num">3</div><h3>AI Works in the Background</h3><p>20+ specialist agents monitor, reconcile, forecast, and flag exceptions. They never write directly to your ledger.</p></div>
+    <div class="step"><div class="step-num">4</div><h3>You Stay in Control</h3><p>Review AI recommendations, approve exceptions, and ask questions in plain English. Toby surfaces insight, you make the call.</p></div>
   </div>
 </section>
 
@@ -330,102 +164,47 @@
   <h2>Be first in line.</h2>
   <p class="section-intro">Register your interest now. We'll be in touch when your spot opens.</p>
   <div class="tiers">
-    <div class="tier featured">
-      <div class="tier-name">Beta</div>
-      <div class="tier-offer">100 spots available</div>
-      <div class="tier-detail">Opening in 6 months</div>
-    </div>
-    <div class="tier">
-      <div class="tier-name">Early Access</div>
-      <div class="tier-offer">900 spots available</div>
-      <div class="tier-detail">Register your interest now</div>
-    </div>
-    <div class="tier">
-      <div class="tier-name">Accounting Partners</div>
-      <div class="tier-offer">Multi-client portal access</div>
-      <div class="tier-detail">Purpose-built for your practice</div>
-    </div>
+    <div class="tier featured"><div class="tier-name">Beta</div><div class="tier-offer">100 spots available</div><div class="tier-detail">Opening in 6 months</div></div>
+    <div class="tier"><div class="tier-name">Early Access</div><div class="tier-offer">2,000 spots available</div><div class="tier-detail">Register your interest now</div></div>
+    <div class="tier"><div class="tier-name">Accounting Partners</div><div class="tier-offer">Multi-client portal access</div><div class="tier-detail">Purpose-built for your practice</div></div>
   </div>
-
   <div class="signup-form" id="signup-form">
-    <div class="form-row">
-      <input type="text" id="f-name" placeholder="Your name">
-      <input type="text" id="f-biz" placeholder="Business name">
-    </div>
+    <div class="form-row"><input type="text" id="f-name" placeholder="Your name"><input type="text" id="f-biz" placeholder="Business name"></div>
     <input type="email" id="f-email" placeholder="Work email address">
     <input type="tel" id="f-phone" placeholder="Phone number">
     <div class="form-row">
-      <select id="f-rev">
-        <option value="" disabled selected>Annual revenue</option>
-        <option>$1M – $5M</option>
-        <option>$5M – $10M</option>
-        <option>$10M – $25M</option>
-        <option>$25M – $50M</option>
-        <option>$50M – $100M</option>
-        <option>$100M+</option>
-      </select>
-      <select id="f-tier">
-        <option value="" disabled selected>Interested in…</option>
-        <option value="Beta">Beta</option>
-        <option value="Early Access">Early Access</option>
-        <option value="Accounting Partner">Accounting Partner</option>
-      </select>
+      <select id="f-rev"><option value="" disabled selected>Annual revenue</option><option>$1M – $5M</option><option>$5M – $10M</option><option>$10M – $25M</option><option>$25M – $50M</option><option>$50M – $100M</option><option>$100M+</option></select>
+      <select id="f-tier"><option value="" disabled selected>Interested in…</option><option value="Beta">Beta</option><option value="Early Access">Early Access</option><option value="Accounting Partner">Accounting Partner</option></select>
     </div>
+    <select id="f-industry" style="width:100%"><option value="" disabled selected>Industry</option><option value="Construction">Construction / Building</option><option value="Professional Services">Professional Services</option><option value="Engineering">Engineering</option><option value="Manufacturing">Manufacturing</option><option value="Trades">Trades / Electrical / Plumbing</option><option value="Property">Property / Real Estate</option><option value="Other">Other</option></select>
     <div class="error-msg" id="form-error">Please complete all required fields.</div>
     <button class="form-submit" id="form-btn" onclick="submitForm()">Register My Interest →</button>
     <p class="form-note">No spam. No commitment. We'll be in touch when your spot opens.</p>
   </div>
-  <div class="success-msg" id="success-msg">
-    ✅ <strong>You're on the list!</strong> We'll be in touch as soon as your access tier opens. Keep an eye on your inbox.
-  </div>
+  <div class="success-msg" id="success-msg">✅ <strong>You're on the list!</strong> We'll be in touch as soon as your access tier opens. Keep an eye on your inbox.</div>
 </section>
 
 <footer>
   <div style="margin-bottom:8px;color:rgba(255,255,255,0.55);font-weight:600">Toby AI</div>
-  <div>
-    <a href="mailto:hello@tobyai.io">hello@tobyai.io</a> &nbsp;·&nbsp;
-    <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
-    <a href="#">Terms</a>
-  </div>
+  <div><a href="mailto:hello@tobyai.io">hello@tobyai.io</a> &nbsp;·&nbsp; <a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms</a></div>
   <div style="margin-top:8px">© 2026 Toby AI · Brisbane, Australia</div>
 </footer>
 
 <script>
   var GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwKahbBF02NvIaMZado7vuzlCKYe0BUHbqxTnwidfGEl94B6kqm3dUxrC9yy1NVPlPF5A/exec';
-
   function submitForm() {
-    var name  = document.getElementById('f-name').value.trim();
-    var biz   = document.getElementById('f-biz').value.trim();
-    var email = document.getElementById('f-email').value.trim();
-    var phone = document.getElementById('f-phone').value.trim();
-    var rev   = document.getElementById('f-rev').value;
-    var tier  = document.getElementById('f-tier').value;
-    var errEl = document.getElementById('form-error');
-    errEl.style.display = 'none';
-    if (!name || !biz || !email || !email.includes('@') || !rev || !tier) {
-      errEl.style.display = 'block'; return;
-    }
-    var btn = document.getElementById('form-btn');
-    btn.disabled = true; btn.textContent = 'Sending…';
-    var payload = { name:name, business:biz, email:email, phone:phone||'—', revenue:rev||'—', tier:tier||'—', submitted:new Date().toISOString() };
-    fetch(GOOGLE_SCRIPT_URL, {
-      method:'POST', mode:'no-cors',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(payload)
-    }).then(function(){ showSuccess(); }).catch(function(){ showSuccess(); });
+    var name=document.getElementById('f-name').value.trim(), biz=document.getElementById('f-biz').value.trim(),
+        email=document.getElementById('f-email').value.trim(), phone=document.getElementById('f-phone').value.trim(),
+        rev=document.getElementById('f-rev').value, tier=document.getElementById('f-tier').value,
+        industry=document.getElementById('f-industry').value, errEl=document.getElementById('form-error');
+    errEl.style.display='none';
+    if(!name||!biz||!email||!email.includes('@')||!rev||!tier){errEl.style.display='block';return;}
+    var btn=document.getElementById('form-btn'); btn.disabled=true; btn.textContent='Sending…';
+    var payload={name:name,business:biz,email:email,phone:phone||'—',revenue:rev||'—',tier:tier||'—',industry:industry||'—',submitted:new Date().toISOString()};
+    fetch(GOOGLE_SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).then(function(){showSuccess()}).catch(function(){showSuccess()});
   }
-
-  function showSuccess() {
-    document.getElementById('signup-form').style.display = 'none';
-    document.getElementById('success-msg').style.display = 'block';
-  }
-
-  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
-    a.addEventListener('click', function(e) {
-      var t = document.querySelector(a.getAttribute('href'));
-      if (t) { e.preventDefault(); t.scrollIntoView({ behavior:'smooth', block:'start' }); }
-    });
-  });
+  function showSuccess(){document.getElementById('signup-form').style.display='none';document.getElementById('success-msg').style.display='block';}
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}});});
 </script>
 </body>
 </html>
