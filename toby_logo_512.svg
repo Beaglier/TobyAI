@@ -7,5 +7,5 @@
   </defs>
   <rect width="512" height="512" rx="96" fill="url(#bg)"/>
   <text x="256" y="280" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="120" font-weight="600" fill="white" letter-spacing="-3">Toby</text>
-  <text x="256" y="370" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="100" font-weight="600" fill="white" letter-spacing="-2" opacity="0.9">AI</text>
+  <text x="256" y="370" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="100" font-weight="600" fill="#7dd4cc" letter-spacing="-2">AI</text>
 </svg>
