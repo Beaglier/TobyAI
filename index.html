@@ -8,7 +8,9 @@
 <meta property="og:title" content="Toby AI — Built for Australian Business">
 <meta property="og:description" content="A new kind of financial operating system. Built for Australian businesses. Coming soon.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://tobyai.io">
+<meta property="og:url" content="https://www.tobyai.io">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232a9d8f'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='20' fill='white'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="canonical" href="https://www.tobyai.io">
 <meta property="og:locale" content="en_AU">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Toby AI — Built for Australian Business">
@@ -575,15 +577,15 @@ footer {
   <footer>
     <div class="footer-left">© 2026 Toby AI Pty Ltd</div>
     <div class="footer-right">
-      <a href="/cdn-cgi/l/email-protection#3e565b5252517e4a515c475f57105751"><span class="__cf_email__" data-cfemail="b8d0ddd4d4d7f8ccd7dac1d9d196d1d7">[email&#160;protected]</span></a>
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
+      <a href="mailto:hello@tobyai.io">hello@tobyai.io</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
     </div>
   </footer>
 
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   var GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwKahbBF02NvIaMZado7vuzlCKYe0BUHbqxTnwidfGEl94B6kqm3dUxrC9yy1NVPlPF5A/exec';
 
   function markSelected(el) {
@@ -626,7 +628,12 @@ footer {
       body: JSON.stringify(payload)
     })
     .then(function() { showSuccess(); })
-    .catch(function() { showSuccess(); });
+    .catch(function() {
+      btn.disabled = false;
+      btn.textContent = 'Request Early Access →';
+      errEl.textContent = 'Something went wrong. Please try again.';
+      errEl.style.display = 'block';
+    });
   }
 
   function showSuccess() {
@@ -635,5 +642,12 @@ footer {
     s.style.display = 'block';
   }
 
-  // Allow Enter key on form
-  document.addEventListener('keydown', fun
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && e.target.closest('#signup-form')) {
+      e.preventDefault();
+      submitForm();
+    }
+  });
+</script>
+</body>
+</html>
