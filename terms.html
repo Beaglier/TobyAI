@@ -1,94 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Use — Toby AI</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232a9d8f'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='20' fill='white'%3ET%3C/text%3E%3C/svg%3E">
-<link rel="canonical" href="https://www.tobyai.io/terms.html">
+<title>Terms · Toby AI</title>
+<meta name="description" content="Toby AI website terms of use.">
+<link rel="canonical" href="https://tobyai.io/terms.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%232a9d8f%22/><text x=%2216%22 y=%2222%22 font-family=%22Segoe UI,Arial,sans-serif%22 font-size=%2218%22 font-weight=%22800%22 fill=%22white%22 text-anchor=%22middle%22>T</text></svg>">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root { --ink: #0e1520; --teal: #2a9d8f; --teal-line: rgba(42,157,143,0.3); --soft: rgba(255,255,255,0.62); --muted: rgba(255,255,255,0.38); --white: #ffffff; --sans: 'DM Sans', system-ui, sans-serif; --serif: 'DM Serif Display', Georgia, serif; }
-  body { font-family: var(--sans); background: var(--ink); color: var(--soft); line-height: 1.7; }
-  nav { padding: 32px 6%; display: flex; align-items: center; justify-content: space-between; }
-  .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
-  .logo-mark { width: 34px; height: 34px; border-radius: 9px; background: linear-gradient(135deg, #2a9d8f, #2a7ca5); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 17px; color: white; box-shadow: 0 0 20px rgba(42,157,143,0.35); }
-  .logo-text { font-weight: 600; font-size: 17px; color: rgba(255,255,255,0.9); }
-  .logo-text em { font-style: normal; color: var(--teal); }
-  .back { color: var(--muted); text-decoration: none; font-size: 13px; }
-  .back:hover { color: var(--teal); }
-  main { max-width: 680px; margin: 0 auto; padding: 40px 24px 80px; }
-  h1 { font-family: var(--serif); font-size: 32px; font-weight: 400; color: var(--white); margin-bottom: 8px; }
-  .updated { font-size: 12px; color: var(--muted); margin-bottom: 36px; }
-  h2 { font-size: 17px; font-weight: 600; color: var(--white); margin: 32px 0 10px; }
-  p, li { font-size: 14px; margin-bottom: 12px; }
-  ul { padding-left: 20px; }
-  li { margin-bottom: 6px; }
-  a { color: var(--teal); }
-  footer { padding: 28px 6%; border-top: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: space-between; }
-  .footer-left { font-size: 12px; color: var(--muted); }
-  .footer-right { display: flex; gap: 20px; }
-  .footer-right a { font-size: 12px; color: var(--muted); text-decoration: none; }
-  .footer-right a:hover { color: var(--teal); }
-  @media (max-width: 560px) { footer { flex-direction: column; gap: 12px; text-align: center; } .footer-right { justify-content: center; } }
+  :root {
+    --navy: #1a2535; --teal: #2a9d8f; --teal2: #21867a; --teal-light: #e8f4f2;
+    --text: #2d3748; --muted: #64748b; --border: #e2eaef;
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  body { font-family: var(--font); color: var(--text); line-height: 1.65; background: white; }
+  nav {
+    background: var(--navy); padding: 14px 5%;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-mark {
+    width: 32px; height: 32px; border-radius: 8px;
+    background: linear-gradient(135deg, #2a9d8f, #3a7ca5);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 16px; color: white;
+  }
+  .logo-text { font-weight: 700; font-size: 18px; color: white; letter-spacing: -0.3px; }
+  .logo-text span { color: var(--teal); }
+  .back-link { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; }
+  .back-link:hover { color: white; }
+  main { max-width: 800px; margin: 0 auto; padding: 60px 24px 80px; }
+  h1 {
+    font-size: 32px; font-weight: 800; color: var(--navy);
+    letter-spacing: -0.5px; margin-bottom: 8px;
+  }
+  .updated { color: var(--muted); font-size: 14px; margin-bottom: 36px; }
+  h2 {
+    font-size: 20px; font-weight: 700; color: var(--navy);
+    margin: 40px 0 12px; letter-spacing: -0.2px;
+  }
+  p { margin-bottom: 14px; font-size: 15px; }
+  ul { margin: 8px 0 16px 24px; }
+  li { margin-bottom: 6px; font-size: 15px; }
+  a { color: var(--teal2); }
+  strong { color: var(--navy); }
+  footer {
+    background: #111b27; color: rgba(255,255,255,0.45);
+    text-align: center; padding: 20px 5%; font-size: 13px;
+  }
+  footer a { color: #5abfb3; text-decoration: none; }
 </style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script defer data-domain="tobyai.io" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
+
 <nav>
-  <a href="/" class="logo"><div class="logo-mark">T</div><span class="logo-text">Toby<em>AI</em></span></a>
-  <a href="/" class="back">&larr; Back</a>
+  <a href="index.html" class="logo">
+    <div class="logo-mark">T</div>
+    <span class="logo-text">Toby<span>AI</span></span>
+  </a>
+  <a href="index.html" class="back-link">← Back to home</a>
 </nav>
+
 <main>
-  <h1>Terms of Use</h1>
-  <p class="updated">Last updated: 22 April 2026</p>
+  <h1>Website Terms of Use</h1>
+  <p class="updated">Last updated: 28 April 2026</p>
 
-  <h2>1. About this website</h2>
-  <p>This website is operated by Toby AI ("we", "us", "our"), an Australian company based in Brisbane, Queensland. It provides information about our product and allows you to register your interest in early access.</p>
+  <p>These terms govern your use of the tobyai.io website (the <strong>"Site"</strong>). They are not the terms of service for the Toby product, which will be provided separately when you become a customer.</p>
 
-  <h2>2. Use of this website</h2>
-  <p>You may use this website for lawful purposes only. You agree not to:</p>
+  <p>By using this Site you agree to these terms. If you do not agree, please do not use the Site.</p>
+
+  <h2>About us</h2>
+  <p>The Site is operated by TobyAI Pty Ltd (<strong>"Toby"</strong>, <strong>"we"</strong>, <strong>"us"</strong>), a company incorporated in Queensland, Australia.</p>
+
+  <h2>Information on this Site</h2>
+  <p>The information on this Site is provided in good faith for general information about Toby and our product. While we make reasonable efforts to ensure the information is accurate and current, we do not guarantee that everything on the Site is complete, accurate, or up to date at all times.</p>
+  <p>Pricing examples and savings indications on the Site are general guidance only. Actual pricing for any customer is determined through a scoping process and confirmed in a quote. The "in the order of 50% less than current spend" indication is a typical outcome based on customer spend across bookkeepers, BAS agents, payroll bureaux, accounts staff, and external compliance support; it is not a guarantee, and individual outcomes vary based on the customer's specific circumstances and the tier selected.</p>
+  <p>Forward-looking statements about product features, capabilities, modules, AI agents, integrations, sector coverage, timelines, and roadmap items reflect current intentions and are subject to change. References on the Site to specific module counts, AI specialist counts, sector capabilities, integration partners, and target launch dates are indicative and may change as the product is built.</p>
+
+  <h2>Founding cohort offers</h2>
+  <p>The Site describes commercial offers available to the Toby founding cohort, including a 20% lifetime discount, three months free trial, and waived migration and implementation fees for customers providing three or more years of clean Xero data.</p>
+  <p>These offers are subject to:</p>
   <ul>
-    <li>Submit false or misleading information through our registration form</li>
-    <li>Attempt to interfere with the operation of this website</li>
-    <li>Use automated tools to scrape or collect data from this website</li>
+    <li>Acceptance into the founding cohort, which is at our discretion based on fit, sector concentration, and capacity</li>
+    <li>The customer entering into a separate Toby customer agreement that governs the commercial relationship</li>
+    <li>The customer providing data of sufficient quality and completeness to support migration, where the data exchange offer applies</li>
+    <li>Toby's reasonable assessment of operational readiness on both sides at the time of onboarding</li>
   </ul>
+  <p>Registering interest through the Site does not entitle you to founding cohort terms or guarantee acceptance into the cohort. Founding cohort offers will be set out in writing in the customer agreement when offered.</p>
 
-  <h2>3. Early access registration</h2>
-  <p>Registering your interest does not guarantee access to Toby AI. We reserve the right to determine access at our sole discretion. Registration is free and does not create any contractual obligation on either party.</p>
+  <h2>Registration of interest</h2>
+  <p>If you submit a registration of interest through the Site, you confirm that the information you provide is accurate and that you are authorised to provide it on behalf of the business you represent.</p>
+  <p>Registering interest does not create a contract or obligation on either party. We will use the information you provide as set out in our <a href="privacy.html">Privacy Policy</a>.</p>
 
-  <h2>4. Intellectual property</h2>
-  <p>All content on this website, including text, design, logos, and graphics, is owned by Toby AI and protected by Australian copyright law. You may not reproduce, distribute, or create derivative works from this content without our written permission.</p>
+  <h2>Intellectual property</h2>
+  <p>All content on the Site, including text, graphics, logos, and design, is owned by or licensed to Toby. You may not copy, reproduce, modify, or distribute any content from the Site without our written permission, except as permitted by law.</p>
+  <p>The Toby name, logo, and brand are trade marks of TobyAI Pty Ltd.</p>
 
-  <h2>5. No financial advice</h2>
-  <p>Nothing on this website constitutes financial, accounting, tax, or legal advice. Toby AI is a software tool, not a licensed financial adviser. You should consult qualified professionals for advice specific to your circumstances.</p>
+  <h2>Linked sites</h2>
+  <p>The Site may contain links to third-party sites. We are not responsible for the content, accuracy, or availability of those sites and a link does not constitute an endorsement.</p>
 
-  <h2>6. Disclaimers</h2>
-  <p>This website and its content are provided "as is" without warranties of any kind. Product features, timelines, and availability described on this website are subject to change. We do not warrant that the website will be uninterrupted or error-free.</p>
+  <h2>Disclaimer and limitation of liability</h2>
+  <p>To the maximum extent permitted by law, Toby excludes all warranties and conditions in connection with the Site that are not expressly set out in these terms. The Site is provided "as is" and "as available".</p>
+  <p>To the maximum extent permitted by law, Toby is not liable for any direct, indirect, consequential, or special loss or damage arising from or in connection with your use of the Site, except where such liability cannot be excluded under the <em>Australian Consumer Law</em>.</p>
+  <p>Where Toby's liability cannot be excluded but can be limited, our liability is limited to re-supplying the affected service or paying the cost of having it re-supplied.</p>
 
-  <h2>7. Limitation of liability</h2>
-  <p>To the maximum extent permitted by Australian law, Toby AI is not liable for any indirect, incidental, or consequential damages arising from your use of this website or reliance on its content.</p>
+  <h2>Privacy</h2>
+  <p>Our handling of personal information collected through the Site is governed by our <a href="privacy.html">Privacy Policy</a>.</p>
 
-  <h2>8. Governing law</h2>
-  <p>These terms are governed by the laws of Queensland, Australia. Any disputes will be subject to the exclusive jurisdiction of the courts of Queensland.</p>
+  <h2>Governing law</h2>
+  <p>These terms are governed by the laws of Queensland, Australia. You agree that the courts of Queensland have non-exclusive jurisdiction over any dispute relating to these terms or your use of the Site.</p>
 
-  <h2>9. Changes to these terms</h2>
-  <p>We may update these terms from time to time. Changes will be posted on this page with an updated date. Continued use of the website after changes constitutes acceptance of the updated terms.</p>
+  <h2>Changes to these terms</h2>
+  <p>We may update these terms from time to time. The "Last updated" date at the top reflects the most recent version. Continued use of the Site after changes constitutes acceptance of the updated terms.</p>
 
-  <h2>10. Contact</h2>
-  <p>If you have questions about these terms, contact us at <a href="mailto:hello@tobyai.io">hello@tobyai.io</a>.</p>
+  <h2>Contact</h2>
+  <p>TobyAI Pty Ltd<br>Brisbane, Queensland, Australia<br>Email: <a href="mailto:hello@tobyai.io">hello@tobyai.io</a></p>
 </main>
+
 <footer>
-  <div class="footer-left">&copy; 2026 Toby AI</div>
-  <div class="footer-right">
-    <a href="https://x.com/toby_ai_" target="_blank" rel="noopener">X / Twitter</a>
-    <a href="mailto:hello@tobyai.io">hello@tobyai.io</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-  </div>
+  <a href="index.html">Toby AI</a> &nbsp;·&nbsp;
+  <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+  <a href="mailto:hello@tobyai.io">hello@tobyai.io</a>
+  <div style="margin-top:6px">© 2026 Toby AI · Brisbane, Australia</div>
 </footer>
+
 </body>
 </html>

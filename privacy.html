@@ -1,111 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Toby AI</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232a9d8f'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='20' fill='white'%3ET%3C/text%3E%3C/svg%3E">
-<link rel="canonical" href="https://www.tobyai.io/privacy.html">
+<title>Privacy Policy · Toby AI</title>
+<meta name="description" content="Toby AI privacy policy. How we collect, use, store, and protect your personal information.">
+<link rel="canonical" href="https://tobyai.io/privacy.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%232a9d8f%22/><text x=%2216%22 y=%2222%22 font-family=%22Segoe UI,Arial,sans-serif%22 font-size=%2218%22 font-weight=%22800%22 fill=%22white%22 text-anchor=%22middle%22>T</text></svg>">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root { --ink: #0e1520; --teal: #2a9d8f; --teal-line: rgba(42,157,143,0.3); --soft: rgba(255,255,255,0.62); --muted: rgba(255,255,255,0.38); --white: #ffffff; --sans: 'DM Sans', system-ui, sans-serif; --serif: 'DM Serif Display', Georgia, serif; }
-  body { font-family: var(--sans); background: var(--ink); color: var(--soft); line-height: 1.7; }
-  nav { padding: 32px 6%; display: flex; align-items: center; justify-content: space-between; }
-  .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
-  .logo-mark { width: 34px; height: 34px; border-radius: 9px; background: linear-gradient(135deg, #2a9d8f, #2a7ca5); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 17px; color: white; box-shadow: 0 0 20px rgba(42,157,143,0.35); }
-  .logo-text { font-weight: 600; font-size: 17px; color: rgba(255,255,255,0.9); }
-  .logo-text em { font-style: normal; color: var(--teal); }
-  .back { color: var(--muted); text-decoration: none; font-size: 13px; }
-  .back:hover { color: var(--teal); }
-  main { max-width: 680px; margin: 0 auto; padding: 40px 24px 80px; }
-  h1 { font-family: var(--serif); font-size: 32px; font-weight: 400; color: var(--white); margin-bottom: 8px; }
-  .updated { font-size: 12px; color: var(--muted); margin-bottom: 36px; }
-  h2 { font-size: 17px; font-weight: 600; color: var(--white); margin: 32px 0 10px; }
-  p, li { font-size: 14px; margin-bottom: 12px; }
-  ul { padding-left: 20px; }
-  li { margin-bottom: 6px; }
-  a { color: var(--teal); }
-  footer { padding: 28px 6%; border-top: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: space-between; }
-  .footer-left { font-size: 12px; color: var(--muted); }
-  .footer-right { display: flex; gap: 20px; }
-  .footer-right a { font-size: 12px; color: var(--muted); text-decoration: none; }
-  .footer-right a:hover { color: var(--teal); }
-  @media (max-width: 560px) { footer { flex-direction: column; gap: 12px; text-align: center; } .footer-right { justify-content: center; } }
+  :root {
+    --navy: #1a2535; --teal: #2a9d8f; --teal2: #21867a; --teal-light: #e8f4f2;
+    --text: #2d3748; --muted: #64748b; --border: #e2eaef;
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  body { font-family: var(--font); color: var(--text); line-height: 1.65; background: white; }
+  nav {
+    background: var(--navy); padding: 14px 5%;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-mark {
+    width: 32px; height: 32px; border-radius: 8px;
+    background: linear-gradient(135deg, #2a9d8f, #3a7ca5);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 16px; color: white;
+  }
+  .logo-text { font-weight: 700; font-size: 18px; color: white; letter-spacing: -0.3px; }
+  .logo-text span { color: var(--teal); }
+  .back-link { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; }
+  .back-link:hover { color: white; }
+  main { max-width: 800px; margin: 0 auto; padding: 60px 24px 80px; }
+  h1 {
+    font-size: 32px; font-weight: 800; color: var(--navy);
+    letter-spacing: -0.5px; margin-bottom: 8px;
+  }
+  .updated { color: var(--muted); font-size: 14px; margin-bottom: 36px; }
+  h2 {
+    font-size: 20px; font-weight: 700; color: var(--navy);
+    margin: 40px 0 12px; letter-spacing: -0.2px;
+  }
+  p { margin-bottom: 14px; font-size: 15px; }
+  ul { margin: 8px 0 16px 24px; }
+  li { margin-bottom: 6px; font-size: 15px; }
+  a { color: var(--teal2); }
+  strong { color: var(--navy); }
+  footer {
+    background: #111b27; color: rgba(255,255,255,0.45);
+    text-align: center; padding: 20px 5%; font-size: 13px;
+  }
+  footer a { color: #5abfb3; text-decoration: none; }
 </style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script defer data-domain="tobyai.io" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
+
 <nav>
-  <a href="/" class="logo"><div class="logo-mark">T</div><span class="logo-text">Toby<em>AI</em></span></a>
-  <a href="/" class="back">&larr; Back</a>
+  <a href="index.html" class="logo">
+    <div class="logo-mark">T</div>
+    <span class="logo-text">Toby<span>AI</span></span>
+  </a>
+  <a href="index.html" class="back-link">← Back to home</a>
 </nav>
+
 <main>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 22 April 2026</p>
+  <p class="updated">Last updated: 28 April 2026</p>
 
-  <h2>1. Who we are</h2>
-  <p>Toby AI ("we", "us", "our") is an Australian company based in Brisbane, Queensland. We build AI-powered financial software for Australian small and medium businesses. This policy explains how we handle personal information in accordance with the Australian Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs).</p>
+  <p>This privacy policy describes how TobyAI Pty Ltd (<strong>"Toby"</strong>, <strong>"we"</strong>, <strong>"us"</strong>) collects, uses, stores, and protects personal information. We comply with the <em>Privacy Act 1988</em> (Cth) and the Australian Privacy Principles (APPs).</p>
 
-  <h2>2. What we collect</h2>
-  <p>When you register your interest via our website, we collect:</p>
+  <h2>What we collect</h2>
+  <p>When you register your interest through tobyai.io, we collect:</p>
   <ul>
-    <li>Your name</li>
-    <li>Business name</li>
-    <li>Work email address</li>
-    <li>Annual revenue range</li>
-    <li>Industry</li>
+    <li>Your name, email address, and phone number</li>
+    <li>Your business name</li>
+    <li>Information about your business, including annual revenue, industry, and region</li>
+    <li>Your role (business owner, CFO, accounting firm partner, investor or advisor)</li>
+    <li>The date and time you submitted the form</li>
   </ul>
+  <p>We do not collect financial account information, tax file numbers, banking details, or sensitive information through the registration form.</p>
 
-  <h2>3. How we use your information</h2>
+  <h2>How we use it</h2>
   <p>We use the information you provide to:</p>
   <ul>
-    <li>Contact you when your early access tier opens</li>
-    <li>Send relevant product updates about Toby AI</li>
-    <li>Understand the types of businesses interested in our product</li>
+    <li>Contact you about your registration of interest</li>
+    <li>Assess fit for the Toby founding cohort or accounting firm partner programme</li>
+    <li>Provide quotes and product information</li>
+    <li>Improve our product and offering based on aggregated, de-identified insights about who is interested in Toby</li>
   </ul>
-  <p>We do not sell, rent, or share your personal information with third parties for their marketing purposes.</p>
+  <p>We do not sell your information to third parties. We do not use your information for marketing unrelated to Toby.</p>
 
-  <h2>4. How we store your information</h2>
-  <p>Registration data is stored in Google Sheets via Google Apps Script. Data transmitted to and from our website is encrypted using TLS. When our product launches, all customer data will be hosted in Australia on Microsoft Azure.</p>
+  <h2>Where it is stored</h2>
+  <p>Information collected through tobyai.io is stored in Google Workspace (Google Sheets and Gmail) and our internal customer relationship management tooling. These services are operated by Google LLC and may store data outside Australia.</p>
+  <p>When you become a Toby customer, your financial and operational data is stored in Microsoft Azure's Australia East region with disaster recovery in Australia Southeast. Data residency for customer data is non-negotiable: your financial data does not leave Australia.</p>
 
-  <h2>5. Third-party services</h2>
-  <p>Our website currently uses:</p>
+  <h2>Who we share it with</h2>
+  <p>We share information only where necessary to operate our business:</p>
   <ul>
-    <li><strong>GitHub Pages</strong> — to host the website</li>
-    <li><strong>Google Apps Script</strong> — to process registration form submissions</li>
+    <li>With service providers who help us run our business (email, CRM, analytics), bound by confidentiality obligations</li>
+    <li>If required by law, court order, or regulatory request</li>
+    <li>Where you have given us specific consent to share, for example with an accounting firm partner you have asked us to engage with</li>
   </ul>
-  <p>Each of these services has its own privacy policy governing their handling of data.</p>
 
-  <h2>6. Your rights</h2>
-  <p>Under the Australian Privacy Principles, you have the right to:</p>
+  <h2>How long we keep it</h2>
+  <p>We retain information you provide for as long as necessary to provide the service you have requested, comply with our legal obligations, resolve disputes, and enforce our agreements. If you no longer wish to be contacted, we will delete or de-identify your information on request, subject to any retention obligations under Australian law.</p>
+
+  <h2>Your rights</h2>
+  <p>Under Australian privacy law, you have the right to:</p>
   <ul>
-    <li>Access the personal information we hold about you</li>
-    <li>Request correction of inaccurate information</li>
-    <li>Request deletion of your information</li>
-    <li>Opt out of future communications</li>
+    <li>Request access to the personal information we hold about you</li>
+    <li>Request correction of inaccurate or incomplete information</li>
+    <li>Request that we stop using your information for marketing</li>
+    <li>Make a complaint about how we have handled your personal information</li>
   </ul>
-  <p>To exercise any of these rights, email us at <a href="mailto:hello@tobyai.io">hello@tobyai.io</a>.</p>
+  <p>To exercise any of these rights, email <a href="mailto:hello@tobyai.io">hello@tobyai.io</a>.</p>
 
-  <h2>7. Cookies</h2>
-  <p>Our website does not use cookies or tracking scripts.</p>
+  <h2>Complaints</h2>
+  <p>If you believe we have breached the Australian Privacy Principles, please contact us first at <a href="mailto:hello@tobyai.io">hello@tobyai.io</a>. We will investigate and respond within 30 days.</p>
+  <p>If you are not satisfied with our response, you can lodge a complaint with the Office of the Australian Information Commissioner (OAIC) at <a href="https://www.oaic.gov.au">www.oaic.gov.au</a>.</p>
 
-  <h2>8. Changes to this policy</h2>
-  <p>We may update this policy from time to time. Changes will be posted on this page with an updated date.</p>
+  <h2>Customer financial data and pattern analysis</h2>
+  <p>This section applies once you become a Toby customer. It does not apply to information you submit through the registration of interest form.</p>
+  <p>When you onboard onto Toby, you give us access to your financial data: your ledger, your bank feeds, your invoices, your payroll, your project costs. That data is yours. We hold it on your behalf in the Australia East region. We do not sell it. We do not give it to other Toby customers. We do not use your raw financial data to train AI models.</p>
+  <p>Patterns extracted from across the Toby customer base, for example how a particular type of expense is typically categorised in a particular industry, are anonymised and aggregated before they leave your tenant. These patterns make the system smarter for every customer. They cannot be used to re-identify your business, your transactions, or your people.</p>
+  <p>Customers who join the founding cohort with three or more years of historical Xero data make the system materially better at understanding Australian SMBs, and their migration and implementation fees are waived in recognition of this. Their data is treated under exactly the same protections as every other customer's.</p>
 
-  <h2>9. Contact</h2>
-  <p>If you have questions about this policy or wish to make a complaint, contact us at <a href="mailto:hello@tobyai.io">hello@tobyai.io</a>.</p>
+  <h2>AI providers and your data</h2>
+  <p>Toby uses AI services from Anthropic, Microsoft Azure AI Foundry, and other providers under our LiteLLM proxy. We never send the following to AI providers under any circumstances:</p>
+  <ul>
+    <li>Tax file numbers</li>
+    <li>Bank account numbers</li>
+    <li>Salary or payroll figures</li>
+    <li>Tenant identifiers that could re-identify your business</li>
+  </ul>
+  <p>Patterns extracted at the AI layer are anonymised and aggregated. Every AI call our product makes is audited. AI providers under our agreements are bound by zero-data-retention or equivalent terms where relevant.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>We may update this policy. The "Last updated" date at the top will reflect any changes. Material changes will be communicated to people whose information we hold by email.</p>
+
+  <h2>Contact</h2>
+  <p>TobyAI Pty Ltd<br>Brisbane, Queensland, Australia<br>Email: <a href="mailto:hello@tobyai.io">hello@tobyai.io</a></p>
 </main>
+
 <footer>
-  <div class="footer-left">&copy; 2026 Toby AI</div>
-  <div class="footer-right">
-    <a href="https://x.com/toby_ai_" target="_blank" rel="noopener">X / Twitter</a>
-    <a href="mailto:hello@tobyai.io">hello@tobyai.io</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-  </div>
+  <a href="index.html">Toby AI</a> &nbsp;·&nbsp;
+  <a href="terms.html">Terms</a> &nbsp;·&nbsp;
+  <a href="mailto:hello@tobyai.io">hello@tobyai.io</a>
+  <div style="margin-top:6px">© 2026 Toby AI · Brisbane, Australia</div>
 </footer>
+
 </body>
 </html>
