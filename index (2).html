@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TobyAI: AI financial operating system for Australian SMBs</title>
+<meta name="description" content="TobyAI is an AI financial operating system for Australian SMBs from $2M to $50M+ revenue. Replaces the transactional finance team. Founding cohort now open.">
+
+<meta property="og:title" content="TobyAI: AI financial operating system for Australian SMBs">
+<meta property="og:description" content="Replace your transactional finance team. Empower your CFO.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tobyai.io">
+<meta property="og:locale" content="en_AU">
+<meta property="og:image" content="https://tobyai.io/toby_og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TobyAI: AI financial operating system for Australian SMBs">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TobyAI: AI financial operating system for Australian SMBs">
+<meta name="twitter:description" content="Replace your transactional finance team. Empower your CFO.">
+<meta name="twitter:image" content="https://tobyai.io/toby_og.png">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #1a2535;
+    --navy2: #1e2e42;
+    --teal: #2a9d8f;
+    --teal2: #21867a;
+    --teal-bright: #5abfb3;
+    --teal-light: #e8f4f2;
+    --accent: #264653;
+    --text: #2d3748;
+    --muted: #64748b;
+    --border: #e2eaef;
+    --white: #ffffff;
+    --bg: #f9fbfc;
+    --radius: 12px;
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--text); background: var(--white); line-height: 1.6; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    background: rgba(26,37,53,0.97); backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 60px;
+  }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-mark {
+    width: 32px; height: 32px; border-radius: 8px;
+    background: linear-gradient(135deg, #2a9d8f, #3a7ca5);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 16px; color: white;
+  }
+  .logo-text { font-weight: 700; font-size: 18px; color: white; letter-spacing: -0.3px; }
+  .logo-text span { color: var(--teal); }
+  nav a.nav-link { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px; margin-left: 28px; transition: color 0.2s; }
+  nav a.nav-link:hover { color: white; }
+  .nav-cta {
+    margin-left: 28px; background: var(--teal); color: white; border: none;
+    padding: 8px 18px; border-radius: 8px; font-size: 14px; font-weight: 600;
+    cursor: pointer; text-decoration: none; transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--teal2); }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(160deg, #1a2535 0%, #1e3347 60%, #162535 100%);
+    padding: 140px 5% 90px; text-align: center; position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
+    width: 700px; height: 700px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(42,157,143,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(42,157,143,0.12); border: 1px solid rgba(42,157,143,0.25);
+    color: var(--teal-bright); border-radius: 20px; padding: 5px 14px;
+    font-size: 13px; font-weight: 600; margin-bottom: 28px; letter-spacing: 0.3px;
+  }
+  .hero h1 {
+    font-size: clamp(30px, 4.5vw, 54px); font-weight: 800; color: white;
+    line-height: 1.15; letter-spacing: -1px; margin-bottom: 20px;
+    max-width: 900px; margin-left: auto; margin-right: auto;
+  }
+  .hero h1 em { color: var(--teal-bright); font-style: normal; }
+  .hero p.lead {
+    font-size: clamp(15px, 1.8vw, 18px); color: rgba(255,255,255,0.62);
+    max-width: 680px; margin: 0 auto 38px;
+  }
+  .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--teal); color: white; border: none;
+    padding: 13px 26px; border-radius: 9px; font-size: 15px; font-weight: 700;
+    cursor: pointer; text-decoration: none; transition: all 0.2s; display: inline-block;
+  }
+  .btn-primary:hover { background: var(--teal2); transform: translateY(-1px); }
+  .btn-ghost {
+    background: transparent; color: rgba(255,255,255,0.78);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 13px 26px; border-radius: 9px; font-size: 15px; font-weight: 600;
+    cursor: pointer; text-decoration: none; transition: all 0.2s; display: inline-block;
+  }
+  .btn-ghost:hover { border-color: rgba(255,255,255,0.4); color: white; }
+  .hero-sub { margin-top: 18px; font-size: 13px; color: rgba(255,255,255,0.4); }
+
+  /* STATS */
+  .stats-bar {
+    background: var(--teal-light); border-top: 1px solid #cde4e0; border-bottom: 1px solid #cde4e0;
+    padding: 26px 5%; display: flex; justify-content: center; gap: 56px; flex-wrap: wrap;
+  }
+  .stat { text-align: center; }
+  .stat-num { font-size: 26px; font-weight: 800; color: var(--accent); letter-spacing: -0.5px; }
+  .stat-label { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  /* SECTIONS */
+  section { padding: 76px 5%; }
+  .section-tag {
+    display: inline-block; background: var(--teal-light); color: var(--teal2);
+    font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+    padding: 4px 12px; border-radius: 20px; margin-bottom: 14px;
+  }
+  h2 { font-size: clamp(22px, 3vw, 34px); font-weight: 800; letter-spacing: -0.4px; margin-bottom: 10px; color: var(--navy); }
+  .section-intro { font-size: 16px; color: var(--muted); max-width: 640px; margin-bottom: 44px; }
+  .section-center { text-align: center; }
+  .section-center .section-intro { margin-left: auto; margin-right: auto; }
+
+  /* PROBLEM SECTION */
+  .problem { background: white; }
+  .problem-text { max-width: 900px; margin: 0 auto 48px; text-align: center; }
+  .problem-text .section-tag { display: inline-block; }
+  .problem-text h2 { margin-bottom: 18px; }
+  .problem-text p { color: var(--muted); margin-bottom: 16px; font-size: 15.5px; }
+  .problem-stacks {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;
+    max-width: 1300px; margin: 0 auto;
+  }
+  .problem-list {
+    background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 24px; display: flex; flex-direction: column;
+  }
+  .problem-list.featured { border-color: var(--teal); border-width: 2px; background: white; }
+  .problem-list .stack-tier {
+    font-size: 11px; font-weight: 700; color: var(--teal2); letter-spacing: 1.2px;
+    text-transform: uppercase; margin-bottom: 4px;
+  }
+  .problem-list h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 14px; line-height: 1.4; }
+  .problem-row {
+    display: flex; justify-content: space-between; align-items: center; gap: 8px;
+    padding: 10px 0; border-bottom: 1px dashed var(--border); font-size: 13px;
+  }
+  .problem-row:last-of-type { border-bottom: none; }
+  .problem-row .role { color: var(--text); font-weight: 600; flex: 1; }
+  .problem-row .cost { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .problem-total {
+    margin-top: 14px; padding: 12px 14px;
+    background: var(--teal-light); border-radius: 8px;
+    display: flex; justify-content: space-between; align-items: center; gap: 8px;
+  }
+  .problem-total .label { font-weight: 700; color: var(--accent); font-size: 13px; }
+  .problem-total .num { font-weight: 800; color: var(--accent); font-size: 15px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .problem-source { font-size: 13px; color: var(--muted); text-align: center; margin-top: 28px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.5; }
+  .problem-savings {
+    margin-top: 36px; max-width: 880px; margin-left: auto; margin-right: auto;
+    background: var(--teal-light); border: 1px solid #cde4e0;
+    border-radius: var(--radius); padding: 22px 28px; text-align: center;
+  }
+  .problem-savings strong { color: var(--accent); font-weight: 800; font-size: 17px; display: block; margin-bottom: 8px; letter-spacing: -0.2px; }
+  .problem-savings p { color: var(--text); font-size: 14.5px; line-height: 1.55; margin: 0; }
+
+  /* PRODUCT SECTION */
+  .product { background: var(--bg); }
+  .agents-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  .agent-card {
+    border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 24px; background: white; transition: all 0.2s;
+  }
+  .agent-card:hover { border-color: var(--teal); box-shadow: 0 4px 20px rgba(42,157,143,0.09); transform: translateY(-2px); }
+  .agent-card h3 { font-size: 14.5px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+  .agent-card p { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
+  .agent-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: var(--teal-light); display: flex; align-items: center; justify-content: center;
+    font-size: 16px; margin-bottom: 12px; color: var(--teal2);
+  }
+
+  /* VERTICALS */
+  .verticals { background: white; }
+  .verticals-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .vertical-card {
+    border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 22px; background: var(--bg); transition: all 0.2s;
+  }
+  .vertical-card:hover { border-color: var(--teal); background: white; }
+  .vertical-num { font-size: 11px; font-weight: 700; color: var(--teal2); letter-spacing: 1.2px; margin-bottom: 6px; }
+  .vertical-title { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .vertical-body { font-size: 13px; color: var(--muted); line-height: 1.55; }
+
+  /* HOW IT WORKS */
+  .how { background: var(--bg); }
+  .layers { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 1100px; margin: 0 auto; }
+  .layer-card {
+    background: white; border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 32px; position: relative;
+  }
+  .layer-card.layer-1 { border-top: 4px solid var(--accent); }
+  .layer-card.layer-2 { border-top: 4px solid var(--teal); }
+  .layer-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .layer-card h3 { font-size: 19px; font-weight: 800; color: var(--navy); margin-bottom: 14px; }
+  .layer-card p { color: var(--muted); font-size: 14.5px; margin-bottom: 12px; }
+  .layer-card strong { color: var(--text); }
+
+  /* COHORT / EARLY ACCESS */
+  .early-access { background: linear-gradient(160deg, #162535, #1a2a3a); color: white; text-align: center; }
+  .early-access h2 { color: white; }
+  .early-access .section-intro { color: rgba(255,255,255,0.55); margin-left: auto; margin-right: auto; }
+  .cohort-perks {
+    display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 44px;
+  }
+  .perk {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius); padding: 18px 22px; text-align: left; min-width: 220px;
+    flex: 1; max-width: 280px;
+  }
+  .perk.featured { border-color: rgba(42,157,143,0.5); background: rgba(42,157,143,0.08); }
+  .perk-tag { font-size: 11px; font-weight: 700; color: var(--teal-bright); letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 6px; }
+  .perk-title { font-size: 15px; font-weight: 700; color: white; margin-bottom: 4px; }
+  .perk-detail { font-size: 12.5px; color: rgba(255,255,255,0.5); line-height: 1.45; }
+
+  .signup-form { max-width: 520px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .signup-form input, .signup-form select {
+    width: 100%; padding: 12px 15px;
+    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px; font-size: 14px; color: white;
+    outline: none; transition: border 0.2s; font-family: var(--font);
+  }
+  .signup-form input::placeholder { color: rgba(255,255,255,0.35); }
+  .signup-form input:focus, .signup-form select:focus { border-color: var(--teal); }
+  .signup-form select option { background: #1e2e42; color: white; }
+  .form-submit {
+    background: var(--teal); color: white; border: none;
+    padding: 13px; border-radius: 8px; font-size: 15px; font-weight: 700;
+    cursor: pointer; transition: background 0.2s; width: 100%; margin-top: 4px;
+  }
+  .form-submit:hover { background: var(--teal2); }
+  .form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+  .form-note { font-size: 11.5px; color: rgba(255,255,255,0.32); margin-top: 4px; line-height: 1.5; }
+  .form-note a { color: var(--teal-bright); text-decoration: none; }
+  .form-note a:hover { text-decoration: underline; }
+  .error-msg { font-size: 12.5px; color: #f87171; display: none; }
+  .success-msg {
+    display: none; background: rgba(42,157,143,0.15); border: 1px solid rgba(42,157,143,0.4);
+    border-radius: 10px; padding: 22px; color: white; font-size: 15px; max-width: 520px; margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #111b27; color: rgba(255,255,255,0.4);
+    text-align: center; padding: 28px 5%; font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  footer a { color: var(--teal-bright); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .footer-brand { color: rgba(255,255,255,0.6); font-weight: 700; margin-bottom: 8px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 1100px) {
+    .problem-stacks { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  }
+  @media (max-width: 900px) {
+    .layers { grid-template-columns: 1fr; gap: 28px; }
+  }
+  @media (max-width: 640px) {
+    .problem-stacks { grid-template-columns: 1fr; gap: 18px; }
+  }
+  @media (max-width: 600px) {
+    .form-row { grid-template-columns: 1fr; }
+    .stats-bar { gap: 28px; }
+    nav a.nav-link { display: none; }
+    .hero { padding-top: 120px; padding-bottom: 70px; }
+  }
+</style>
+
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-mark">T</div>
+    <span class="logo-text">Toby<span>AI</span></span>
+  </a>
+  <div style="display:flex;align-items:center">
+    <a href="#product" class="nav-link">Product</a>
+    <a href="#how" class="nav-link">How it works</a>
+    <a href="#early-access" class="nav-cta">Founding cohort</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">Founding cohort now open</div>
+  <h1>Your transactional finance team, automated. <em>Your CFO, empowered.</em></h1>
+  <p class="lead">TobyAI is an AI financial operating system for Australian SMBs from $2M to $50M+ revenue. Twenty AI specialists run the bookkeeping, BAS, payroll, AP, AR, project costing, and cash flow forecasting. One ledger, deterministic and auditable, with AI sitting on top.</p>
+  <div class="hero-actions">
+    <a href="#early-access" class="btn-primary">Join the founding cohort</a>
+    <a href="#how" class="btn-ghost">See how it works</a>
+  </div>
+  <p class="hero-sub">Built in Brisbane. Hosted in Australia. Regulated under Australian law.</p>
+</section>
+
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num">20</div><div class="stat-label">AI specialists in your finance team</div></div>
+  <div class="stat"><div class="stat-num">$2M to $50M+</div><div class="stat-label">Phase 1 revenue range</div></div>
+  <div class="stat"><div class="stat-num">31</div><div class="stat-label">Modules covering every corner of finance</div></div>
+  <div class="stat"><div class="stat-num">AU</div><div class="stat-label">Data sovereign, hosted Azure Australia East</div></div>
+</div>
+
+<section class="problem" id="problem">
+  <div class="problem-text">
+    <div class="section-tag">The problem</div>
+    <h2>Your transactional finance function is expensive, slow, and fragile.</h2>
+    <p>Australian businesses from $2M to $50M+ revenue carry a transactional finance function that scales with revenue and ages with complexity. Bookkeepers, AP and AR clerks, financial controllers, payroll officers, in-house CFOs, outsourced BAS agents, advisory CFOs. The work is largely transactional: data entry, reconciliation, BAS prep, payroll runs, AP processing, AR follow-ups.</p>
+    <p>Three indicative cost stacks below. Find your size. The output is the same set of monthly numbers most CFOs see two to three weeks after month-end. That is not a CFO problem. It is a transactional-labour problem.</p>
+    <p style="font-weight:600;color:var(--text)">TobyAI replaces the transactional layer. Your CFO stays, better resourced, with cleaner numbers, faster.</p>
+  </div>
+  <div class="problem-stacks">
+
+    <div class="problem-list">
+      <div class="stack-tier">Smaller</div>
+      <h3>$2M to $10M revenue</h3>
+      <div class="problem-row"><span class="role">Senior Bookkeeper</span><span class="cost">$95k to $120k</span></div>
+      <div class="problem-row"><span class="role">AP / AR support</span><span class="cost">$35k to $55k</span></div>
+      <div class="problem-row"><span class="role">Outsourced BAS / compliance</span><span class="cost">$8k to $20k</span></div>
+      <div class="problem-row"><span class="role">External advisory and tax</span><span class="cost">$5k to $15k</span></div>
+      <div class="problem-total">
+        <span class="label">Loaded total</span>
+        <span class="num">$140k to $210k</span>
+      </div>
+    </div>
+
+    <div class="problem-list">
+      <div class="stack-tier">Mid</div>
+      <h3>$10M to $25M revenue</h3>
+      <div class="problem-row"><span class="role">Financial Controller</span><span class="cost">$180k to $230k</span></div>
+      <div class="problem-row"><span class="role">Senior Bookkeeper</span><span class="cost">$95k to $120k</span></div>
+      <div class="problem-row"><span class="role">AP / AR Clerk</span><span class="cost">$66k to $80k</span></div>
+      <div class="problem-row"><span class="role">Outsourced BAS / payroll bureau</span><span class="cost">$15k to $45k</span></div>
+      <div class="problem-total">
+        <span class="label">Loaded total</span>
+        <span class="num">$300k to $420k</span>
+      </div>
+    </div>
+
+    <div class="problem-list">
+      <div class="stack-tier">Larger</div>
+      <h3>$25M to $50M revenue</h3>
+      <div class="problem-row"><span class="role">Financial Controller / Finance Manager</span><span class="cost">$200k to $260k</span></div>
+      <div class="problem-row"><span class="role">Management Accountant</span><span class="cost">$140k to $180k</span></div>
+      <div class="problem-row"><span class="role">Senior Bookkeeper / AP Lead</span><span class="cost">$110k to $140k</span></div>
+      <div class="problem-row"><span class="role">AP / AR Team (2 FTE)</span><span class="cost">$130k to $160k</span></div>
+      <div class="problem-row"><span class="role">In-house Payroll Officer</span><span class="cost">$95k to $120k</span></div>
+      <div class="problem-row"><span class="role">External BAS / advisory CFO</span><span class="cost">$30k to $80k</span></div>
+      <div class="problem-total">
+        <span class="label">Loaded total</span>
+        <span class="num">$600k to $840k</span>
+      </div>
+    </div>
+
+    <div class="problem-list">
+      <div class="stack-tier">Premium</div>
+      <h3>$50M+ revenue</h3>
+      <div class="problem-row"><span class="role">Full-time CFO</span><span class="cost">$310k to $410k</span></div>
+      <div class="problem-row"><span class="role">Financial Controller (Group)</span><span class="cost">$230k to $295k</span></div>
+      <div class="problem-row"><span class="role">Commercial Finance Manager</span><span class="cost">$190k to $245k</span></div>
+      <div class="problem-row"><span class="role">Senior Management Accountant</span><span class="cost">$165k to $205k</span></div>
+      <div class="problem-row"><span class="role">AP / AR Team (3 FTE)</span><span class="cost">$250k to $310k</span></div>
+      <div class="problem-row"><span class="role">In-house Payroll Manager</span><span class="cost">$115k to $155k</span></div>
+      <div class="problem-row"><span class="role">Tax / compliance specialist</span><span class="cost">$100k to $140k</span></div>
+      <div class="problem-row"><span class="role">External audit and advisory</span><span class="cost">$40k to $120k</span></div>
+      <div class="problem-total">
+        <span class="label">Loaded total</span>
+        <span class="num">$1.4M to $1.9M</span>
+      </div>
+    </div>
+
+  </div>
+  <div class="problem-savings">
+    <strong>Most customers see in the order of 50% less than their current transactional and compliance spend.</strong>
+    <p>The exact saving depends on your existing setup, complexity, and the tier that fits your business. We tell you the saving before you commit, subject to scoping.</p>
+  </div>
+  <p class="problem-source">Indicative annual loaded costs (base salary plus on-costs at ~25 to 30%, including super, payroll tax, leave provisions, equipment, and recruitment amortisation). Sourced from Hays FY25/26 Salary Guide, Robert Half 2026, ScaleSuite 2026, and Brisbane market data via SEEK and Glassdoor. Your numbers will vary by industry, complexity, and structure.</p>
+</section>
+
+<section class="product" id="product">
+  <div class="section-center">
+    <div class="section-tag">The product</div>
+    <h2>Twenty specialists. One ledger. No coordination overhead.</h2>
+    <p class="section-intro">Each agent is purpose-built for the Australian compliance regime, not a retrofit of a global product. The deterministic rules engine pulls statutory rates and thresholds directly from the ATO, Fair Work, and state revenue offices. A Chartered Accountant-led compliance team owns the interpretation work that judgement requires. AI sits above the ledger, never inside it.</p>
+  </div>
+  <div class="agents-grid">
+    <div class="agent-card">
+      <div class="agent-icon">⚙</div>
+      <h3>Bank Reconciliation</h3>
+      <p>Continuous reconciliation against bank feeds. Auto-categorise, auto-match, exceptions surfaced for human review only.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">📥</div>
+      <h3>Accounts Payable</h3>
+      <p>OCR invoice capture, three-way match to PO and GRN, approval workflow, duplicate detection, payment runs.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">📤</div>
+      <h3>Accounts Receivable</h3>
+      <p>Invoicing, payment matching, statement runs, ageing analysis, automated follow-up sequences calibrated by customer.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">📋</div>
+      <h3>BAS, GST, TPAR</h3>
+      <p>Quarterly BAS prepared end to end. G1 to G19, W1 to W5, PAYG withholding, GST classification, TPAR. Reviewed before lodgement.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">💼</div>
+      <h3>Payroll</h3>
+      <p>STP2-ready integration with Employment Hero and KeyPay in Phase 1. Payday Super reform from 1 July 2026 built in from day one. Anomaly detection on every pay run.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">🏢</div>
+      <h3>Fixed Asset</h3>
+      <p>Asset register, ATO effective life depreciation, additions, disposals, impairment. AASB 116 and AASB 16 compliant from day one.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">📦</div>
+      <h3>Inventory</h3>
+      <p>Multi-location stock, BOM and WIP, FIFO costing, landed cost calculation, stock turn analytics. AASB 102 compliant.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">🏗</div>
+      <h3>Project Costing</h3>
+      <p>Job costing, WIP, milestone billing, retention, defects, project P&L. Built for businesses where every job is its own ledger.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">📊</div>
+      <h3>FP&A</h3>
+      <p>Variance analysis, budget vs actual, rolling forecasts, scenario modelling, board-ready management reports.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">🛡</div>
+      <h3>Audit and Compliance</h3>
+      <p>Anomaly detection across the ledger, insurance and licence currency tracking, immutable audit trail, payroll tax automation by state.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">📁</div>
+      <h3>Document Management</h3>
+      <p>OCR capture, classification, indexing. Every supplier invoice, customer contract, payslip, and receipt searchable and audit-linked.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">💰</div>
+      <h3>Cash Flow Forecasting</h3>
+      <p>Rolling 13-week forecast, scenario modelling, anomaly detection. Risks surfaced before they become problems.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">🧾</div>
+      <h3>Expense Management</h3>
+      <p>Employee expense capture, policy compliance, duplicate detection, approval routing, reimbursement runs.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">📞</div>
+      <h3>Debt Collection</h3>
+      <p>Ageing analysis, automated follow-up sequences, escalation paths, payment plan tracking, write-off workflow.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">💡</div>
+      <h3>Insights</h3>
+      <p>Proactive nightly analysis across your ledger and operations. Trends, opportunities, and risks surfaced as they emerge, not at month-end.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">✓</div>
+      <h3>QA Financial</h3>
+      <p>Continuous data quality checks across the ledger. Reconciliation validation, balance integrity, posting consistency, period-end readiness.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">🔒</div>
+      <h3>Platform Integrity</h3>
+      <p>Always-on monitoring of every transaction, every AI action, and every user event. Tamper-evident audit trail. Your security perimeter, watched.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">⚖</div>
+      <h3>Legal and HR</h3>
+      <p>Award rate currency, NES and Fair Work compliance, contract renewal tracking, leave entitlement validation, employment record keeping.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">📐</div>
+      <h3>Estimating</h3>
+      <p>Quote generation from project templates, margin analysis, win/loss tracking, conversion to job costing on acceptance.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">🤝</div>
+      <h3>Relationship Intelligence</h3>
+      <p>Customer and supplier behaviour patterns, payment reliability, concentration risk, relationship health scoring across your ledger.</p>
+    </div>
+  </div>
+</section>
+
+<section class="verticals">
+  <div class="section-center">
+    <div class="section-tag">Sectors we serve</div>
+    <h2>Sector-agnostic by design. Australian by every line of code.</h2>
+    <p class="section-intro">TobyAI is built for any Australian SMB in the $2M to $50M+ revenue band. The eight categories below cover the bulk of the businesses we are talking to, but the platform is general-purpose. The compliance complexity that varies by sector, GST treatment, TPAR scope, FBT exposure, payroll structure, asset profile, all sits inside the rules engine. You see the parts that apply to you.</p>
+  </div>
+
+  <div class="verticals-grid">
+    <div class="vertical-card">
+      <div class="vertical-num">→ 01</div>
+      <div class="vertical-title">Professional Services and Consulting</div>
+      <div class="vertical-body">Engineering, architecture, surveying, town planning, IT consulting, creative agencies. Time-billable, deliverables-based work. WIP, fee variations, milestone invoicing, project P&L.</div>
+    </div>
+    <div class="vertical-card">
+      <div class="vertical-num">→ 02</div>
+      <div class="vertical-title">Property and Development</div>
+      <div class="vertical-body">Developers, property managers, body corporate operators. Multi-entity structures, intercompany loans, project capitalisation, GST margin scheme, sales settlement workflows.</div>
+    </div>
+    <div class="vertical-card">
+      <div class="vertical-num">→ 03</div>
+      <div class="vertical-title">Construction and Civil</div>
+      <div class="vertical-body">Head contractors and subcontractors. QBCC and equivalent state licensing. Progress claims, retention, defects, BIF Act, subcontractor TPAR.</div>
+    </div>
+    <div class="vertical-card">
+      <div class="vertical-num">→ 04</div>
+      <div class="vertical-title">Trades and Field Services</div>
+      <div class="vertical-body">Electricians, plumbers, HVAC, carpenters, painters, roofers, concreters. Job-based and time-and-materials work. Materials margin, time-billable utilisation, asset and tool tracking.</div>
+    </div>
+    <div class="vertical-card">
+      <div class="vertical-num">→ 05</div>
+      <div class="vertical-title">Wholesale, Distribution and Light Manufacturing</div>
+      <div class="vertical-body">Inventory-driven businesses with multi-location stock, BOM and WIP, terms management, freight on cost. FIFO costing, landed cost calculation, stock turn analytics.</div>
+    </div>
+    <div class="vertical-card">
+      <div class="vertical-num">→ 06</div>
+      <div class="vertical-title">Healthcare and Allied Health</div>
+      <div class="vertical-body">Multi-practitioner practices, allied health groups, dental, optometry, specialist clinics. Practitioner billing splits, Medicare and private health claim cycles, GST exemption rules, payroll tax thresholds by state.</div>
+    </div>
+    <div class="vertical-card">
+      <div class="vertical-num">→ 07</div>
+      <div class="vertical-title">Hospitality, Tourism and Retail</div>
+      <div class="vertical-body">Hotels, restaurants, cafes, accommodation, boutique retail. High-frequency transactions, EFTPOS reconciliation, FBT on entertainment, payroll-heavy operations, tip and gratuity treatment.</div>
+    </div>
+    <div class="vertical-card">
+      <div class="vertical-num">→ 08</div>
+      <div class="vertical-title">Transport, Mining Services and Resources</div>
+      <div class="vertical-body">Logistics, freight, FIFO mining services, civil resources contracting. Asset-heavy depreciation, fuel tax credits, rosters and FIFO payroll, project-based revenue with retention.</div>
+    </div>
+  </div>
+  <p style="text-align:center;font-size:13.5px;color:var(--muted);margin-top:32px;max-width:680px;margin-left:auto;margin-right:auto">Not on the list? Still talk to us. The categories above are where the early conversations are loudest, not the boundary of what the platform handles. If you run an Australian business in the $2M to $50M+ revenue range, the system is built for you.</p>
+</section>
+
+<section class="how" id="how">
+  <div class="section-center">
+    <div class="section-tag">How it works</div>
+    <h2>Two layers. Complete confidence.</h2>
+    <p class="section-intro">A deterministic ledger and rules engine handle every financial calculation. AI sits above it, adding intelligence without ever touching your numbers. As more Australian SMBs join, the system learns the patterns of how AU businesses actually run. Your numbers stay yours. The patterns make the system smarter for everyone.</p>
+  </div>
+  <div class="layers">
+    <div class="layer-card layer-1">
+      <div class="layer-tag">Layer 1, deterministic</div>
+      <h3>The ledger and rules engine</h3>
+      <p>Every journal entry, every BAS calculation, every payroll run, every depreciation schedule. Deterministic, reproducible, auditable. <strong>No AI inference touches your numbers.</strong></p>
+      <p>Statutory rates and thresholds, including PAYG withholding, SG, payroll tax by state, ATO effective life, and Award rates, are pulled directly from the ATO, Fair Work, and state revenue offices. The CA-led compliance team owns the interpretation work where judgement is required: BAS labels, GST treatments, FBT, TPAR, AASB application, Payday Super. All sourced, all dated, all reviewed before release.</p>
+    </div>
+    <div class="layer-card layer-2">
+      <div class="layer-tag">Layer 2, AI</div>
+      <h3>The intelligence layer</h3>
+      <p>Twenty AI agents read the ledger, monitor exceptions, prepare drafts, propose actions, and surface insight. <strong>They never write to the ledger directly.</strong> Every AI action is logged, audited, and reversible.</p>
+      <p>All AI calls are routed through a proxy with no hardcoded model references. Raw financial identifiers, including TFNs, bank details, salary data, and tenant identifiers, never leave the Australian system boundary. Patterns extracted at the AI layer are anonymised and aggregated.</p>
+    </div>
+  </div>
+</section>
+
+<section class="early-access" id="early-access">
+  <div class="section-center">
+    <div class="section-tag" style="background:rgba(42,157,143,0.12);color:var(--teal-bright)">Founding cohort</div>
+    <h2>Twenty-five businesses. Foundational pricing for life.</h2>
+    <p class="section-intro">The founding cohort shapes the product and locks in foundational economics that never lapse. Bring three or more years of clean Xero data and we waive both migration and implementation. Your data depth makes the system work for you from day one. The patterns we extract, anonymised and aggregated, help Toby learn how Australian SMBs actually run.</p>
+  </div>
+  <div class="cohort-perks">
+    <div class="perk featured">
+      <div class="perk-tag">Founding terms</div>
+      <div class="perk-title">20% lifetime discount</div>
+      <div class="perk-detail">Locked in from launch, applied for the life of the relationship, regardless of future pricing.</div>
+    </div>
+    <div class="perk">
+      <div class="perk-tag">Free trial</div>
+      <div class="perk-title">Three months on the house</div>
+      <div class="perk-detail">No commitment, no card upfront. Move when you are ready, not when a calendar says so.</div>
+    </div>
+    <div class="perk">
+      <div class="perk-tag">Data exchange</div>
+      <div class="perk-title">Migration and implementation waived</div>
+      <div class="perk-detail">Bring three or more years of clean Xero data, both fees waived. Your historical data lets the system work for you from day one.</div>
+    </div>
+    <div class="perk">
+      <div class="perk-tag">Channel</div>
+      <div class="perk-title">Accounting firm partnership</div>
+      <div class="perk-detail">Wholesale terms for accounting firms onboarding clients. Built around the firm relationship, not around it.</div>
+    </div>
+  </div>
+
+  <div class="signup-form" id="signup-form">
+    <div class="form-row">
+      <input type="text" id="f-name" placeholder="Your name" autocomplete="name">
+      <input type="text" id="f-biz" placeholder="Business name" autocomplete="organization">
+    </div>
+    <input type="email" id="f-email" placeholder="Work email address" autocomplete="email">
+    <input type="tel" id="f-phone" placeholder="Phone number" autocomplete="tel">
+    <div class="form-row">
+      <select id="f-rev">
+        <option value="" disabled selected>Annual revenue</option>
+        <option>Under $2M</option>
+        <option>$2M to $10M</option>
+        <option>$10M to $25M</option>
+        <option>$25M to $50M</option>
+        <option>$50M+</option>
+      </select>
+      <select id="f-industry">
+        <option value="" disabled selected>Industry</option>
+        <option>Professional Services and Consulting</option>
+        <option>Property and Development</option>
+        <option>Construction and Civil</option>
+        <option>Trades and Field Services</option>
+        <option>Wholesale, Distribution and Light Manufacturing</option>
+        <option>Healthcare and Allied Health</option>
+        <option>Hospitality, Tourism and Retail</option>
+        <option>Transport, Mining Services and Resources</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <select id="f-region">
+        <option value="" disabled selected>Region</option>
+        <option>South East Queensland</option>
+        <option>Other Queensland</option>
+        <option>NSW / ACT</option>
+        <option>Victoria</option>
+        <option>SA / WA / NT / TAS</option>
+      </select>
+      <select id="f-tier">
+        <option value="" disabled selected>I am</option>
+        <option>A business owner / operator</option>
+        <option>A CFO or senior finance lead</option>
+        <option>An accounting firm partner</option>
+        <option>An investor or advisor</option>
+      </select>
+    </div>
+    <div class="error-msg" id="form-error">Please complete all required fields.</div>
+    <button class="form-submit" id="form-btn" onclick="submitForm()">Register interest</button>
+    <p class="form-note">No spam, no commitment. Your information is held under Australian privacy law and used only to contact you about the founding cohort. See our <a href="privacy.html">Privacy Policy</a>.</p>
+  </div>
+  <div class="success-msg" id="success-msg">
+    <strong>You are on the list.</strong><br>
+    We will be in touch directly. The founding cohort is small and the conversation is real, expect a phone call, not a marketing sequence.
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">TobyAI</div>
+  <div>
+    <a href="mailto:hello@tobyai.io">hello@tobyai.io</a> &nbsp;·&nbsp;
+    <a href="privacy.html">Privacy</a> &nbsp;·&nbsp;
+    <a href="terms.html">Terms</a>
+  </div>
+  <div style="margin-top:8px">© 2026 TobyAI Pty Ltd · Brisbane, Australia</div>
+</footer>
+
+<script>
+  var GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwKahbBF02NvIaMZado7vuzlCKYe0BUHbqxTnwidfGEl94B6kqm3dUxrC9yy1NVPlPF5A/exec';
+
+  function submitForm() {
+    var name     = document.getElementById('f-name').value.trim();
+    var biz      = document.getElementById('f-biz').value.trim();
+    var email    = document.getElementById('f-email').value.trim();
+    var phone    = document.getElementById('f-phone').value.trim();
+    var rev      = document.getElementById('f-rev').value;
+    var industry = document.getElementById('f-industry').value;
+    var region   = document.getElementById('f-region').value;
+    var tier     = document.getElementById('f-tier').value;
+    var errEl    = document.getElementById('form-error');
+    errEl.style.display = 'none';
+
+    if (!name || !biz || !email || !email.includes('@') || !rev || !industry || !region || !tier) {
+      errEl.style.display = 'block';
+      return;
+    }
+
+    var btn = document.getElementById('form-btn');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    var payload = {
+      name: name,
+      business: biz,
+      email: email,
+      phone: phone || '',
+      revenue: rev,
+      industry: industry,
+      region: region,
+      tier: tier,
+      source: 'tobyai.io v4.7',
+      submitted: new Date().toISOString()
+    };
+
+    fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payload)
+    }).then(function() { showSuccess(); }).catch(function() { showSuccess(); });
+  }
+
+  function showSuccess() {
+    document.getElementById('signup-form').style.display = 'none';
+    document.getElementById('success-msg').style.display = 'block';
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var t = document.querySelector(a.getAttribute('href'));
+      if (t) {
+        e.preventDefault();
+        t.scrollIntoView({behavior: 'smooth', block: 'start'});
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
