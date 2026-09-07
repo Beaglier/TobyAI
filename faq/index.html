@@ -103,7 +103,8 @@
     {"@type": "Question", "name": "Is this tax, legal or financial advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. TobyAI states what the legislation, the revenue office or the award provides and what your figures compute to under it. It is information, not tax, legal, financial or employment advice, and the Terms of Use say so. A qualified person decides what to do with it."}},
     {"@type": "Question", "name": "What tooling is there, beyond looking up the law?", "acceptedAnswer": {"@type": "Answer", "text": "More than thirty deterministic tools: data-health checks over an accounting file, payroll and BAS reconciliations, calculators for payroll tax, super, FBT and termination, obligation checklists and a research surface. Each reads your data, checks it against the law in force and cites the provision for every finding."}},
     {"@type": "Question", "name": "Where does a figure come from?", "acceptedAnswer": {"@type": "Answer", "text": "From a versioned schedule that names its source and the date it was checked, attested by a named Compliance Lead. The engine computes the figure in code and shows the working. No AI model originates a rate, threshold, date, classification or legal position."}},
-    {"@type": "Question", "name": "Where is my data?", "acceptedAnswer": {"@type": "Answer", "text": "Processed and held in Sydney. No name, tax file number, bank detail or salary reaches an AI provider, and nothing you send is used to train a model."}}
+    {"@type": "Question", "name": "Which law does TobyAI hold?", "acceptedAnswer": {"@type": "Answer", "text": "One central hub across the compliance surface at Commonwealth and state level: income tax, GST, PAYG, super and FBT; every state's payroll tax Act and published rates; the Fair Work Act and the awards; work health and safety, privacy, AML/CTF, Corporations Act and consumer law. More than three thousand documents held as the published text, every paragraph traceable to its publisher."}},
+    {"@type": "Question", "name": "Where is my data?", "acceptedAnswer": {"@type": "Answer", "text": "Processed and held in Sydney, encrypted at rest and in transit. No name, tax file number, bank detail or salary reaches an AI provider; identifiers are hashed before anything leaves the deterministic layer, and nothing you send is used to train a model."}}
   ]
 }
 </script>
@@ -137,7 +138,7 @@
 
       <div class="qa" id="what-is-tobyai">
         <h3><a href="#what-is-tobyai">What is TobyAI?</a></h3>
-        <p>Two things that only work together. One is a consolidated body of Australian law: the Commonwealth Acts, the state payroll tax Acts, the revenue offices' published rates and the FairWork awards, held as one versioned, cited corpus. The other is the tooling that reads your data and checks it against that law: data-quality checks over an accounting file, payroll and BAS reconciliations, obligation checklists, calculators and a research surface that answers from the provision. Every figure shows its working and cites the source it rests on.</p>
+        <p>Two things that only work together. One is a consolidated body of Australian compliance law, Commonwealth and state, from income tax, GST, PAYG and super through payroll tax and the FairWork awards to work health and safety, privacy and ASIC obligations, held as one versioned, cited corpus. The other is the tooling that reads your data and checks it against that law: data-quality checks over an accounting file, payroll and BAS reconciliations, obligation checklists, calculators and a research surface that answers from the provision. Every figure shows its working and cites the source it rests on.</p>
         <p>It is not accounting software, not a payroll system and not a lodgement service. It is the thing you reach for when the question is whether the figure your software holds is the one the law requires.</p>
       </div>
 
@@ -276,7 +277,14 @@
 
       <div class="qa" id="what-law">
         <h3><a href="#what-law">Which law does TobyAI hold?</a></h3>
-        <p>Commonwealth tax and employment legislation from the Federal Register, the payroll tax Acts of every state and territory, the revenue offices' published rates and thresholds, ATO guidance and rulings, and the FairWork awards, as one indexed corpus with every paragraph traceable to its publisher. Consolidated legislation is held as the published compilations, so a citation points at the text as it stood, not a paraphrase. What is computed, and what is held for research only, is set out on the <a href="/#coverage">coverage pages</a>.</p>
+        <p>One central hub for the obligations a business and its advisers have to meet, at Commonwealth and state level, across the whole compliance surface rather than one corner of it:</p>
+        <ul>
+          <li><strong>Commonwealth tax.</strong> Income tax, GST, PAYG withholding and instalments, super guarantee, FBT, Div 7A, PSI and the administration Acts, as Federal Register compilations, with the ATO's published rates, guidance and rulings beside them.</li>
+          <li><strong>State and territory revenue.</strong> The payroll tax Act of every state and territory, the revenue offices' published rates, thresholds and worked examples, long service leave and workers' compensation Acts.</li>
+          <li><strong>Employment.</strong> The Fair Work Act and the National Employment Standards, the FairWork awards with their classifications, rates and allowances, and the Fair Work Commission's published data.</li>
+          <li><strong>The wider regulatory surface.</strong> Work health and safety Acts in each jurisdiction, the Privacy Act, AML/CTF, the Corporations Act and ASIC obligations, competition and consumer law, modern slavery, prudential and accounting standards.</li>
+        </ul>
+        <p>More than three thousand documents, held as the published text with every paragraph traceable to its publisher, so a citation points at the provision as it stood, not a paraphrase. Bringing them into one place is the point: an obligation missed is usually one that lived in a source nobody was watching. What is computed, and what is held for research and citation only, is set out on the <a href="/#coverage">coverage pages</a>.</p>
       </div>
 
       <div class="qa" id="prior-year">
@@ -300,12 +308,22 @@
 
       <div class="qa" id="where-data">
         <h3><a href="#where-data">Where is my data, and my clients' data?</a></h3>
-        <p>Processed and held in Sydney. No name, tax file number, bank detail or salary reaches an AI provider; identifiers are hashed before anything leaves the deterministic layer. Nothing you send is used to train a model. The <a href="/privacy.html">privacy policy</a> sets this out.</p>
+        <p>In Sydney, and it stays there. Compute, the database, the encrypted store for connection tokens and the operational logs all run in the AWS Sydney region, with data encrypted at rest and in transit. The AI models the assistant uses run in Australia too, on AWS Bedrock. The <a href="/privacy.html">privacy policy</a> sets this out.</p>
+      </div>
+
+      <div class="qa" id="pii-ai">
+        <h3><a href="#pii-ai">What does AI actually see?</a></h3>
+        <p>Never the personal information. Tax file numbers, bank account numbers, salary figures, employee names and raw organisation identifiers do not reach an AI provider. Before anything leaves the deterministic layer, identifiers are replaced with a salted hash unique to your organisation and the record is reduced to the non-personal shape the explanation needs: an account code, a label, a computed figure. That boundary is held by automated checks that run on every change to the code, not by a policy document.</p>
+      </div>
+
+      <div class="qa" id="no-training">
+        <h3><a href="#no-training">Is my data used to train AI?</a></h3>
+        <p>No. Nothing you send, upload or connect is used to train, fine-tune or otherwise update any model, ours or a provider's. AI runs as a fixed, measured model that receives a de-identified view at the moment it runs and retains nothing from it. Your data is not sold or shared with a third party for their own use.</p>
       </div>
 
       <div class="qa" id="who-sees">
         <h3><a href="#who-sees">Who can see my organisation's data?</a></h3>
-        <p>The people you add to your organisation, and no other customer. Sign-in is through your identity provider, and the API refuses any tool call until the current Terms of Use have been accepted by your organisation.</p>
+        <p>The people you add to your organisation, and no other customer. Every record is siloed to your organisation; nothing is pooled across customers or shown to another. Sign-in is through your identity provider, connections such as Xero are read-only and revocable by you at any time, and the API refuses any tool call until the current Terms of Use have been accepted by your organisation.</p>
       </div>
 
       <div class="qa" id="record">
