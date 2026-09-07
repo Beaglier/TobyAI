@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing | TobyAI</title>
+  <meta name="description" content="Core is $50 per seat per month, or $540 per seat per year, with a 14-day trial. The Xero health check is free. Prices in Australian dollars.">
+  <link rel="canonical" href="https://www.tobyai.io/pricing/">
+  <meta property="og:title" content="Pricing | TobyAI">
+  <meta property="og:description" content="Core is $50 per seat per month, or $540 per seat per year, with a 14-day trial. The Xero health check is free. Prices in Australian dollars.">
+  <meta property="og:url" content="https://www.tobyai.io/pricing/">
+  <meta property="og:image" content="https://www.tobyai.io/toby_logo_1024.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #16202f;
+    --paper: #ffffff;
+    --shell: #f5f8f7;
+    --rule: #e2e8e6;
+    --ink: #16202f;
+    --ink-2: #4d5a6e;
+    --ink-3: #78849a;
+    --teal: #0b7d84;
+    --teal-display: #0e9aa0;
+    --teal-d: #08666c;
+    --gutter: 32px;
+    --sans: 'Instrument Sans', system-ui, sans-serif;
+    --serif: 'Source Serif 4', Georgia, serif;
+  }
+  body { font-family: var(--sans); background: var(--paper); color: var(--ink);
+    -webkit-font-smoothing: antialiased; line-height: 1.55; }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 var(--gutter); }
+  .hero { padding-block: 54px 36px; }
+  .hero > * { max-width: 760px; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--teal); margin-bottom: 14px; }
+  h1 { font-size: clamp(31px, 3.8vw, 42px); font-weight: 600; line-height: 1.16;
+    letter-spacing: -0.9px; color: var(--ink); }
+  .lede { font-family: var(--serif); font-size: 19px; line-height: 1.6; color: var(--ink-2);
+    margin-top: 18px; max-width: 40em; }
+  .layout { display: grid; grid-template-columns: 220px 1fr; gap: 48px; align-items: start; }
+  .toc { position: sticky; top: 24px; }
+  .band-label { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-3); margin-bottom: 12px; }
+  .toc a { display: block; font-size: 14px; color: var(--ink-2); text-decoration: none;
+    padding: 6px 0 6px 12px; border-left: 2px solid var(--rule); }
+  .toc a:hover { color: var(--teal); border-left-color: var(--teal); }
+  .group { margin-bottom: 44px; }
+  .group h2 { font-size: 22px; font-weight: 600; letter-spacing: -0.4px; color: var(--ink);
+    padding-bottom: 12px; border-bottom: 1px solid var(--rule); margin-bottom: 8px; }
+  .qa { padding: 20px 0; border-bottom: 1px solid var(--rule); }
+  .qa:last-child { border-bottom: 0; }
+  .qa h3 { font-size: 17px; font-weight: 600; line-height: 1.35; color: var(--ink); margin-bottom: 8px; }
+  .qa h3 a { text-decoration: none; color: inherit; }
+  .qa h3 a:hover { color: var(--teal); }
+  .qa p { font-size: 15.5px; line-height: 1.65; color: var(--ink-2); max-width: 44em; }
+  .qa p + p { margin-top: 10px; }
+  .qa ul { margin: 10px 0; padding-left: 22px; max-width: 44em; }
+  .qa li { font-size: 15.5px; line-height: 1.65; color: var(--ink-2); margin-bottom: 6px; }
+  .qa p a { color: var(--teal); text-decoration: none; }
+  .qa p a:hover { text-decoration: underline; }
+  .compare { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 14.5px; max-width: 44em; }
+  .compare th, .compare td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule); }
+  .compare th { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+  .compare td:first-child { color: var(--ink); font-weight: 600; width: 34%; }
+  .compare td { color: var(--ink-2); line-height: 1.55; }
+  .compare tr:last-child td { border-bottom: 0; }
+  .cta { margin-top: 12px; background: var(--navy); color: white; border-radius: 12px;
+    padding: 26px 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .cta h2 { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+  .cta p { font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.66); max-width: 44em; }
+  .btn { flex: none; padding: 12px 20px; border-radius: 8px; background: var(--teal); color: white;
+    font-size: 15px; font-weight: 600; text-decoration: none; }
+  .btn:hover { background: var(--teal-d); }
+  @media (max-width: 860px) {
+    .layout { grid-template-columns: 1fr; gap: 28px; }
+    .toc { position: static; }
+    .cta { flex-direction: column; align-items: flex-start; }
+    .hero { padding-block: 40px 28px; }
+  }
+  @media (max-width: 640px) {
+    :root { --gutter: 20px; }
+    .compare td:first-child { width: 40%; }
+  }
+
+  .plan { border: 1px solid var(--rule); border-radius: 12px; padding: 26px 28px; margin-top: 18px; max-width: 44em; }
+  .plan .price { font-size: 40px; font-weight: 600; letter-spacing: -1px; color: var(--ink); line-height: 1; }
+  .plan .price small { font-size: 15px; font-weight: 500; letter-spacing: 0; color: var(--ink-2); margin-left: 6px; }
+  .plan .alt { font-size: 15px; color: var(--ink-2); margin-top: 8px; }
+  .plan ul { margin: 18px 0 0; padding-left: 22px; }
+  .plan li { font-size: 15.5px; line-height: 1.65; color: var(--ink-2); margin-bottom: 6px; }
+  .plan .btn { display: inline-block; margin-top: 20px; }
+  .free { background: var(--shell); border-color: transparent; }
+  .prose p { font-size: 15.5px; line-height: 1.65; color: var(--ink-2); max-width: 44em; margin-bottom: 12px; }
+  .prose ul { margin: 0 0 12px; padding-left: 22px; max-width: 44em; }
+  .prose li { font-size: 15.5px; line-height: 1.65; color: var(--ink-2); margin-bottom: 6px; }
+  .prose p a, .prose li a { color: var(--teal); text-decoration: none; }
+  .prose p a:hover, .prose li a:hover { text-decoration: underline; }
+  .prose h3 { font-size: 17px; font-weight: 600; margin: 22px 0 8px; color: var(--ink); }
+  .prose p.law { font-family: var(--serif); font-size: 17px; line-height: 1.6; color: var(--ink); border-left: 3px solid var(--teal);
+    padding: 4px 0 4px 18px; margin: 14px 0 16px; max-width: 40em; }
+
+  .site-head { background: var(--paper); border-bottom: 1px solid var(--rule); position: relative; z-index: 10; }
+  .site-head .bar { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 24px; }
+  .brand { display: flex; align-items: center; gap: 11px; font-weight: 600; font-size: 18px; color: var(--ink); text-decoration: none; }
+  .mark { width: 28px; height: 28px; border-radius: 8px; background: var(--teal); color: white;
+    display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; }
+  .site-nav { display: flex; align-items: center; gap: 26px; font-size: 14px; }
+  .site-nav a { color: var(--ink-2); text-decoration: none; }
+  .site-nav a:hover { color: var(--teal); }
+  .site-nav a[aria-current="page"] { color: var(--ink); font-weight: 600; }
+  .site-nav .nav-cta { color: var(--teal); font-weight: 600; }
+  .menu-toggle { display: none; width: 40px; height: 40px; border: 0; background: none; padding: 8px; cursor: pointer;
+    flex-direction: column; justify-content: center; gap: 5px; }
+  .menu-toggle span { display: block; height: 2px; background: var(--ink); border-radius: 1px; transition: transform .2s, opacity .2s; }
+  .site-head.open .menu-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .site-head.open .menu-toggle span:nth-child(2) { opacity: 0; }
+  .site-head.open .menu-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .site-foot { margin-top: 48px; padding: 28px 0 56px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--ink-3); }
+  .site-foot nav { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-bottom: 12px; }
+  .site-foot a { color: var(--ink-2); text-decoration: none; }
+  .site-foot a:hover { color: var(--teal); }
+  .site-foot p { margin: 0; line-height: 1.6; }
+  @media (max-width: 860px) {
+    .menu-toggle { display: flex; }
+    .site-nav { display: none; position: absolute; left: 0; right: 0; top: 72px; background: var(--paper);
+      border-bottom: 1px solid var(--rule); flex-direction: column; align-items: stretch; gap: 0;
+      padding: 8px var(--gutter) 16px; box-shadow: 0 12px 24px rgba(22,32,47,.08); }
+    .site-head.open .site-nav { display: flex; }
+    .site-nav a { padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 16px; }
+    .site-nav a:last-child { border-bottom: 0; }
+  }
+  @media (max-width: 640px) {
+    :root { --gutter: 20px; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "TobyAI Core",
+  "description": "Australian compliance platform seat: deterministic tax and payroll tools, the consolidated corpus of Commonwealth and state obligations, and a hosted assistant, processed and held in Sydney.",
+  "brand": {"@type": "Brand", "name": "TobyAI"},
+  "offers": [
+    {"@type": "Offer", "name": "Core, monthly", "price": "50.00", "priceCurrency": "AUD", "url": "https://www.tobyai.io/pricing/", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "50.00", "priceCurrency": "AUD", "unitText": "per seat per month"}},
+    {"@type": "Offer", "name": "Core, annual", "price": "540.00", "priceCurrency": "AUD", "url": "https://www.tobyai.io/pricing/", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "540.00", "priceCurrency": "AUD", "unitText": "per seat per year"}},
+    {"@type": "Offer", "name": "Xero health check", "price": "0.00", "priceCurrency": "AUD", "url": "https://www.tobyai.io/pricing/"}
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap bar">
+    <a class="brand" href="/"><span class="mark">T</span>TobyAI</a>
+    <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    <nav id="site-nav" class="site-nav">
+      <a href="/">Home</a>
+      <a href="/#coverage">Coverage</a>
+      <a href="/answers/">Answers</a>
+      <a href="/pricing/" aria-current="page">Pricing</a>
+      <a href="/about/">About</a>
+      <a href="/faq/">FAQ</a>
+      <a class="nav-cta" href="/#signup-form">Sign up</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap hero">
+  <p class="eyebrow">Pricing</p>
+  <h1>One plan, priced per seat, with the health check free</h1>
+  <p class="lede">A seat is one person who signs in. Every seat carries the full tool catalogue, the whole corpus and unlimited client work. Prices are in Australian dollars.</p>
+</div>
+
+<div class="wrap layout">
+  <aside class="toc">
+    <p class="band-label">On this page</p>
+    <a href="#core">Core</a>
+    <a href="#free">Free health check</a>
+    <a href="#replies">Assistant replies</a>
+    <a href="#firms">Larger firms</a>
+    <a href="#questions">Common questions</a>
+  </aside>
+
+  <main>
+    <section class="group" id="core">
+      <h2>Core</h2>
+      <div class="plan">
+        <p class="price">$50<small>per seat, per month</small></p>
+        <p class="alt">Or $540 per seat, per year, paid annually (10% off). 14-day trial on every new organisation, cancel any time.</p>
+        <ul>
+          <li>Every deterministic tool: payroll tax across the computed states, super and Payday Super, PAYG withholding, FBT, termination pay, BAS and payroll reconciliations, obligation checklists and the health checks.</li>
+          <li>The whole corpus: Commonwealth and state legislation, published rates and rulings, the FairWork awards and the regulators' guidance, current and as at a past date.</li>
+          <li>Unlimited clients and unlimited runs per seat. Each run records what was asked, the schedule version used and the working.</li>
+          <li>500 hosted assistant replies per seat per month for the plain-language explanations, then 3 cents a reply, or a pack of 1,000 replies for $25.</li>
+          <li>Bring your own AI through MCP and the assistant allowance is not used at all.</li>
+          <li>Processed and held in Sydney. Personal information never reaches an AI provider, and nothing you send trains a model. See <a href="/security/">Security and privacy</a>.</li>
+        </ul>
+        <a class="btn" href="/#signup-form">Start the 14-day trial</a>
+      </div>
+    </section>
+
+    <section class="group" id="free">
+      <h2>Free health check</h2>
+      <div class="plan free">
+        <p class="price">$0<small>for as long as you like</small></p>
+        <p class="alt">The Xero health check is free, with no card and no trial clock.</p>
+        <ul>
+          <li>Connect a Xero organisation read-only and get a cited report of what in the file would not survive review.</li>
+          <li>Up to 50 hosted assistant replies a month to talk through the findings.</li>
+          <li>TobyAI never writes to your Xero file, and you can revoke access in Xero at any time.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="group" id="replies">
+      <h2>Assistant replies</h2>
+      <div class="prose">
+        <p>A reply is one answer from the hosted assistant, the part of TobyAI that explains a computed result or a provision in plain language. The figures themselves are computed in code and are not metered: a payroll tax calculation, a reconciliation or a health check run does not use a reply.</p>
+        <p>Core includes 500 replies per seat per month. Most people use well under that. Past the allowance, each reply is 3 cents, billed monthly, or you can buy 1,000 replies for $25 in advance. If you connect your own AI through MCP, the assistant runs on your model and the allowance does not apply.</p>
+      </div>
+    </section>
+
+    <section class="group" id="firms">
+      <h2>Larger firms</h2>
+      <div class="prose">
+        <p>Core is priced the same for the first seat and the fiftieth. A firm that wants a single agreement, its own terms of engagement or a dedicated onboarding writes to <a href="mailto:hello@tobyai.io">hello@tobyai.io</a>, and we agree it directly.</p>
+      </div>
+    </section>
+
+    <section class="group" id="questions">
+      <h2>Common questions</h2>
+
+      <div class="qa" id="trial">
+        <h3><a href="#trial">What happens in the trial?</a></h3>
+        <p>Everything in Core is available for 14 days from the day your organisation is created. A card is taken at the start through Stripe, and nothing is charged until the trial ends. Cancel before then and you pay nothing.</p>
+      </div>
+
+      <div class="qa" id="seats">
+        <h3><a href="#seats">How are seats counted?</a></h3>
+        <p>One seat per person who can sign in to your organisation, with a minimum of one. The subscription follows your member count: add a member and a seat is added, remove one and it is removed. Clients you act for are not seats: a bookkeeper on one seat can work across every client file.</p>
+      </div>
+
+      <div class="qa" id="annual">
+        <h3><a href="#annual">How does the annual price work?</a></h3>
+        <p>$540 per seat covers twelve months, which is ten per cent less than paying monthly. You choose monthly or annual at checkout. To move between them later, write to <a href="mailto:hello@tobyai.io">hello@tobyai.io</a> and we change it at the next renewal.</p>
+      </div>
+
+      <div class="qa" id="card">
+        <h3><a href="#card">Who holds my card details?</a></h3>
+        <p>Stripe. TobyAI never sees or stores a card number; checkout and the billing portal are Stripe pages, and TobyAI receives only the subscription status.</p>
+      </div>
+
+      <div class="qa" id="cancel">
+        <h3><a href="#cancel">Can I cancel?</a></h3>
+        <p>Yes, at any time in the billing portal. Access continues to the end of the period you have paid for, and the free health check stays available afterwards. The record of what you ran stays in your account.</p>
+      </div>
+    </section>
+
+    <div class="cta">
+      <div>
+        <h2>Start with the free health check</h2>
+        <p>Sign up, connect Xero read-only, and see what the checks find before you decide on a seat.</p>
+      </div>
+      <a class="btn" href="/#signup-form">Sign up now</a>
+    </div>
+  </main>
+</div>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#coverage">Coverage</a>
+      <a href="/answers/">Answers</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/about/">About</a>
+      <a href="/security/">Security</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="mailto:hello@tobyai.io">hello@tobyai.io</a>
+    </nav>
+    <p>© 2026 TobyAI. Processed and held in Sydney.</p>
+    <p>Page updated 7 September 2026.</p>
+  </div>
+</footer>
+<script>
+(function(){var h=document.querySelector('.site-head'),b=h&&h.querySelector('.menu-toggle');if(!b)return;
+b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&h.classList.contains('open')){h.classList.remove('open');b.setAttribute('aria-expanded','false');b.focus();}});})();
+</script>
+</body>
+</html>
