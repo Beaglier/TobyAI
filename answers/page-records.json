@@ -248,5 +248,95 @@
         "value": "A$517.00"
       }
     ]
+  },
+  {
+    "slug": "fbt-type-2",
+    "lead": "A$4,433.98",
+    "rows": [
+      {
+        "label": "Taxable value",
+        "value": "A$5,000.00"
+      },
+      {
+        "label": "Type 2 gross-up",
+        "value": "1.8868"
+      },
+      {
+        "label": "Grossed-up amount",
+        "value": "A$9,434.00"
+      },
+      {
+        "label": "FBT rate",
+        "value": "47%"
+      },
+      {
+        "label": "FBT payable",
+        "value": "A$4,433.98"
+      }
+    ],
+    "prior_rows": []
+  },
+  {
+    "slug": "payg-wage-withholding",
+    "lead": "A$16,020.00",
+    "rows": [
+      {
+        "label": "Annual wage",
+        "value": "A$85,000.00"
+      },
+      {
+        "label": "Bracket threshold",
+        "value": "A$45,000.00"
+      },
+      {
+        "label": "Base withholding at threshold",
+        "value": "A$4,020.00"
+      },
+      {
+        "label": "Rate above threshold",
+        "value": "30%"
+      },
+      {
+        "label": "Withheld",
+        "value": "A$16,020.00"
+      }
+    ],
+    "prior_rows": [
+      {
+        "label": "2025-26",
+        "value": "A$16,288.00"
+      }
+    ]
+  },
+  {
+    "slug": "payday-super-due",
+    "lead": "A$600.00",
+    "rows": [
+      {
+        "label": "Qualifying earnings",
+        "value": "A$5,000.00"
+      },
+      {
+        "label": "SG rate",
+        "value": "12%"
+      },
+      {
+        "label": "SG due",
+        "value": "A$600.00"
+      },
+      {
+        "label": "Payday",
+        "value": "24 December 2026"
+      },
+      {
+        "label": "Business days allowed",
+        "value": "7"
+      },
+      {
+        "label": "Due by",
+        "value": "07 January 2027"
+      }
+    ],
+    "prior_rows": []
   }
 ]
