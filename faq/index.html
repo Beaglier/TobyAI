@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Frequently asked questions | TobyAI</title>
-  <meta name="description" content="What TobyAI is, how it works beside Xero, MYOB and payroll software, where each figure comes from, and what it refuses to answer. Australian tax and employment law, computed and cited.">
+  <meta name="description" content="What TobyAI is, how it works beside Xero, MYOB and payroll software, the tools that check your data against the law, where each figure comes from, and what it refuses to answer.">
   <link rel="canonical" href="https://www.tobyai.io/faq/">
   <meta property="og:title" content="Frequently asked questions | TobyAI">
-  <meta property="og:description" content="What TobyAI is, how it works beside Xero, MYOB and payroll software, where each figure comes from, and what it refuses to answer.">
+  <meta property="og:description" content="What TobyAI is, how it works beside Xero, MYOB and payroll software, the tools that check your data against the law, where each figure comes from, and what it refuses to answer.">
   <meta property="og:url" content="https://www.tobyai.io/faq/">
   <meta property="og:image" content="https://www.tobyai.io/toby_logo_1024.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,6 +60,8 @@
   .qa h3 a:hover { color: var(--teal); }
   .qa p { font-size: 15.5px; line-height: 1.65; color: var(--ink-2); max-width: 44em; }
   .qa p + p { margin-top: 10px; }
+  .qa ul { margin: 10px 0; padding-left: 22px; max-width: 44em; }
+  .qa li { font-size: 15.5px; line-height: 1.65; color: var(--ink-2); margin-bottom: 6px; }
   .qa p a { color: var(--teal); text-decoration: none; }
   .qa p a:hover { text-decoration: underline; }
   .compare { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 14.5px; max-width: 44em; }
@@ -99,6 +101,7 @@
     {"@type": "Question", "name": "Is TobyAI a replacement for Xero or MYOB?", "acceptedAnswer": {"@type": "Answer", "text": "No. TobyAI keeps no ledger and writes nothing to yours. It reads figures from your accounting file or an export and checks them against the law in force on that date. Keep your accounting software; TobyAI sits beside it."}},
     {"@type": "Question", "name": "Does TobyAI run payroll or lodge with the ATO?", "acceptedAnswer": {"@type": "Answer", "text": "No. It checks that the super rate, PAYG scale, payroll tax threshold, due dates and award rates your payroll uses are the ones the law provides on that date, and shows where the law says so. You or your registered agent lodge."}},
     {"@type": "Question", "name": "Is this tax, legal or financial advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. TobyAI states what the legislation, the revenue office or the award provides and what your figures compute to under it. It is information, not tax, legal, financial or employment advice, and the Terms of Use say so. A qualified person decides what to do with it."}},
+    {"@type": "Question", "name": "What tooling is there, beyond looking up the law?", "acceptedAnswer": {"@type": "Answer", "text": "More than thirty deterministic tools: data-health checks over an accounting file, payroll and BAS reconciliations, calculators for payroll tax, super, FBT and termination, obligation checklists and a research surface. Each reads your data, checks it against the law in force and cites the provision for every finding."}},
     {"@type": "Question", "name": "Where does a figure come from?", "acceptedAnswer": {"@type": "Answer", "text": "From a versioned schedule that names its source and the date it was checked, attested by a named Compliance Lead. The engine computes the figure in code and shows the working. No AI model originates a rate, threshold, date, classification or legal position."}},
     {"@type": "Question", "name": "Where is my data?", "acceptedAnswer": {"@type": "Answer", "text": "Processed and held in Sydney. No name, tax file number, bank detail or salary reaches an AI provider, and nothing you send is used to train a model."}}
   ]
@@ -112,8 +115,8 @@
 </div>
 <div class="wrap hero">
   <p class="eyebrow">Frequently asked questions</p>
-  <h1>The law beside your ledger</h1>
-  <p class="lede">Your accounting and payroll software records what happened and pays people on time. TobyAI holds the law those figures have to meet, checks them against it, and cites the provision. These are the questions accountants and bookkeepers ask before they trust it.</p>
+  <h1>The law beside your ledger, and the tools to check your data against it</h1>
+  <p class="lede">Your accounting and payroll software records what happened and pays people on time. TobyAI holds the law those figures have to meet, and more than thirty tools that read your data and check it against that law, finding by finding, with the provision cited. These are the questions accountants and bookkeepers ask before they trust it.</p>
 </div>
 
 <div class="wrap layout">
@@ -121,6 +124,7 @@
     <p class="band-label">On this page</p>
     <a href="#what">What TobyAI is</a>
     <a href="#software">Working with Xero, MYOB and payroll</a>
+    <a href="#tooling">Checking and verifying your data</a>
     <a href="#figures">Where the figures come from</a>
     <a href="#law">The law it holds</a>
     <a href="#data">Data and security</a>
@@ -133,7 +137,7 @@
 
       <div class="qa" id="what-is-tobyai">
         <h3><a href="#what-is-tobyai">What is TobyAI?</a></h3>
-        <p>A compliance layer for Australian businesses and the accountants and bookkeepers who look after them. It holds the Commonwealth Acts, the state payroll tax Acts, the revenue offices' published rates and the FairWork awards as one versioned, cited body of law, and it computes what each obligation means for a specific business in auditable code. Every figure shows its working and cites the provision it rests on.</p>
+        <p>Two things that only work together. One is a consolidated body of Australian law: the Commonwealth Acts, the state payroll tax Acts, the revenue offices' published rates and the FairWork awards, held as one versioned, cited corpus. The other is the tooling that reads your data and checks it against that law: data-quality checks over an accounting file, payroll and BAS reconciliations, obligation checklists, calculators and a research surface that answers from the provision. Every figure shows its working and cites the source it rests on.</p>
         <p>It is not accounting software, not a payroll system and not a lodgement service. It is the thing you reach for when the question is whether the figure your software holds is the one the law requires.</p>
       </div>
 
@@ -166,6 +170,7 @@
             <tr><td>Xero, MYOB: record transactions, reconcile, report</td><td>Read the figures and check them against the Act, the revenue office's published rate and the award clause, with the citation</td></tr>
             <tr><td>Payroll systems: calculate and pay wages, super and PAYG from their tables</td><td>Confirm the rate, threshold, due date and award classification the tables should be using on that date, and say where the law provides it</td></tr>
             <tr><td>Your accountant or registered agent: advise and lodge</td><td>Hand them the working, the provision and the schedule version to stand behind</td></tr>
+            <tr><td>Your review checklist and the spreadsheet of thresholds beside it</td><td>Run the checks itself, over the real data, and record what it found and what it rested on</td></tr>
           </tbody>
         </table>
       </div>
@@ -193,6 +198,47 @@
       <div class="qa" id="for-practices">
         <h3><a href="#for-practices">How does it fit into a bookkeeping or accounting practice?</a></h3>
         <p>As the check before the figure goes out. Run a client's payroll period, BAS or year-end figures through it and get back the items that do not match the law in force, each with the provision, the working and the schedule version. That is the file note. Clients are served from the same portal, and the answer they receive is the one you would have had to look up.</p>
+      </div>
+    </section>
+
+    <section class="group" id="tooling">
+      <h2>Checking and verifying your data</h2>
+
+      <div class="qa" id="what-tools">
+        <h3><a href="#what-tools">What tooling is there, beyond looking up the law?</a></h3>
+        <p>More than thirty tools, each one deterministic and each one citing what it rested on. They fall into four kinds:</p>
+        <ul>
+          <li><strong>Data health.</strong> Reads an accounting file and reports what would not survive review: duplicate contacts, dormant accounts, stale bank feeds, aged unreconciled transactions, contact ABNs that do not match the ABR.</li>
+          <li><strong>Reconciliation and close.</strong> Payroll close, STP finalisation against the ledger, BAS label checks, TPAR, month-end close progress, receivables ageing.</li>
+          <li><strong>Calculation.</strong> Payroll tax by state, super guarantee and payday readiness, FBT, termination and redundancy, depreciation, Div 7A, PSI, and a forward tax position, each from a versioned schedule that says whether it is attested.</li>
+          <li><strong>Obligations and research.</strong> Due dates from the tax calendar, obligation checklists across privacy, AML/CTF, information security and ASIC director duties, and a research surface that answers a question from the provision itself.</li>
+        </ul>
+        <p>The law and the tooling are the same product on purpose: a check is only worth running if it can tell you which provision it failed against.</p>
+      </div>
+
+      <div class="qa" id="health-check">
+        <h3><a href="#health-check">What does the free Xero health check actually look at?</a></h3>
+        <p>It reads the accounting data you authorise, read-only, and returns a list of findings rather than a score: duplicate and near-duplicate contacts, contact ABNs that fail the check digit or repeat across contacts, dormant accounts, missing or inconsistent tax codes, transactions coded to the wrong account, and transactions left unreconciled past their age. Each finding says what it found, where, and why it matters. Nothing is written back to your file.</p>
+      </div>
+
+      <div class="qa" id="spreadsheet">
+        <h3><a href="#spreadsheet">Can I hand it a spreadsheet or an export instead of connecting anything?</a></h3>
+        <p>Yes. Attach a spreadsheet, a payroll export or a document in the portal and the same engines audit it against the same primary sources. If the workbook cannot be read honestly, for instance the columns cannot be identified with confidence, it is refused rather than guessed at. That is how MYOB, QuickBooks and other payroll systems are supported today, while Xero connects directly.</p>
+      </div>
+
+      <div class="qa" id="verify">
+        <h3><a href="#verify">How is this different from the checks my software already runs?</a></h3>
+        <p>Your software checks itself against its own rules and its own tables. TobyAI checks it against the law: it re-derives the figure from the Act, the revenue office's published rate or the award clause on the date in question, and compares. When the two disagree, you get the difference, the provision and the working, not a warning icon.</p>
+      </div>
+
+      <div class="qa" id="file-note">
+        <h3><a href="#file-note">What do I get at the end of a run?</a></h3>
+        <p>The answer, the working in cents, the citation for each figure, the version of the schedule used and the date its source was checked. Every run is recorded, so months later you can show what was asked, what the law said then, and what the tool returned. That is the point of the audit trail: not that the tool was confident, but that its answer can be re-derived.</p>
+      </div>
+
+      <div class="qa" id="tool-refuse">
+        <h3><a href="#tool-refuse">Will a tool ever give me a figure it cannot support?</a></h3>
+        <p>No. A tool whose schedule is not attested, or whose source has not been published for the period asked, refuses and says which input it is missing. Judgement calls, whether entities are grouped, whether someone is a contractor, are put to you with the test and its citation, and the figure is computed only after you record the decision.</p>
       </div>
     </section>
 
