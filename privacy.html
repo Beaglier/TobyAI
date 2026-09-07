@@ -7,64 +7,95 @@
 <link rel="canonical" href="https://www.tobyai.io/privacy.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --navy: #1a2535; --navy2: #162030; --teal: #2a9d8f; --teal2: #21867a;
-    --teal-glow: #5abfb3; --teal-light: #e8f4f2;
-    --text: #2d3748; --muted: #64748b; --border: #e2eaef;
-    --font-head: 'Big Shoulders Display', system-ui, sans-serif;
+    --navy: #1a2535;
+    --navy2: #162030;
+    --teal2: #21867a;
+    --teal-glow: #5abfb3;
+    --teal-light: #e8f4f2;
+    --text: #2d3748;
+    --muted: #64748b;
+    --border: #e2eaef;
+    --paper: #ffffff;
+    --rule: #e2e8e6;
+    --ink: #16202f;
+    --ink-2: #4d5a6e;
+    --ink-3: #78849a;
+    --teal: #0b7d84;
+    --gutter: 32px;
+    --sans: 'Instrument Sans', system-ui, sans-serif;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --font-head: 'Instrument Sans', system-ui, sans-serif;
     --font-body: 'Instrument Sans', system-ui, sans-serif;
   }
-  body { font-family: var(--font-body); color: var(--text); background: #f9fbfc; line-height: 1.7; -webkit-font-smoothing: antialiased; }
-
-  nav {
-    background: var(--navy2); padding: 0 5%;
-    display: flex; align-items: center; height: 60px;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-  }
-  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .logo-mark {
-    width: 30px; height: 30px; border-radius: 8px;
-    background: linear-gradient(135deg, #2a9d8f, #21867a);
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--font-head); font-weight: 900; font-size: 16px; color: white;
-  }
-  .logo-text { font-family: var(--font-head); font-weight: 800; font-size: 18px; color: white; letter-spacing: -0.4px; }
-  .logo-text span { color: var(--teal-glow); }
-  .back-link { margin-left: auto; font-size: 13px; color: rgba(255,255,255,0.45); text-decoration: none; }
-  .back-link:hover { color: white; }
-
-  .wrap { max-width: 640px; margin: 0 auto; padding: 56px 24px 80px; }
-
-  .page-tag {
-    display: inline-block; background: var(--teal-light); color: var(--teal2);
-    font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
-    padding: 4px 12px; border-radius: 20px; margin-bottom: 14px;
-  }
-  h1 { font-family: var(--font-head); font-size: clamp(30px, 5vw, 46px); font-weight: 800; letter-spacing: -1px; color: var(--navy); line-height: 1; margin-bottom: 8px; }
-  .effective { font-size: 13px; color: var(--muted); margin-bottom: 40px; }
-  p { font-size: 15px; margin-bottom: 16px; }
-  a { color: var(--teal2); text-decoration: none; }
+  body { font-family: var(--sans); background: var(--paper); color: var(--ink); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  a { color: var(--teal); text-decoration: none; }
   a:hover { text-decoration: underline; }
-
-  footer { text-align: center; padding: 20px; font-size: 12px; color: var(--muted); border-top: 1px solid var(--border); }
-  footer a { color: var(--teal2); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 var(--gutter); }
+  .legal-wrap { padding-block: 56px 80px; }
+  .legal-wrap > * { max-width: 44em; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; }
+  h1 { font-family: var(--sans); font-size: clamp(31px, 3.8vw, 42px); font-weight: 600; letter-spacing: -.5px; line-height: 1.16; color: var(--ink); margin-bottom: 8px; }
+  .effective { font-size: 13px; color: var(--ink-3); margin-bottom: 40px; }
+  .legal-wrap p { font-size: 17px; line-height: 1.7; color: var(--ink-2); margin-bottom: 16px; }
+  .site-head { background: var(--paper); border-bottom: 1px solid var(--rule); position: relative; z-index: 10; }
+  .site-head .bar { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 24px; }
+  .brand { display: flex; align-items: center; gap: 11px; font-weight: 600; font-size: 18px; color: var(--ink); text-decoration: none; }
+  .mark { width: 28px; height: 28px; border-radius: 8px; background: var(--teal); color: white;
+    display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; }
+  .site-nav { display: flex; align-items: center; gap: 26px; font-size: 14px; }
+  .site-nav a { color: var(--ink-2); text-decoration: none; }
+  .site-nav a:hover { color: var(--teal); }
+  .site-nav a[aria-current="page"] { color: var(--ink); font-weight: 600; }
+  .site-nav .nav-cta { color: var(--teal); font-weight: 600; }
+  .menu-toggle { display: none; width: 40px; height: 40px; border: 0; background: none; padding: 8px; cursor: pointer;
+    flex-direction: column; justify-content: center; gap: 5px; }
+  .menu-toggle span { display: block; height: 2px; background: var(--ink); border-radius: 1px; transition: transform .2s, opacity .2s; }
+  .site-head.open .menu-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .site-head.open .menu-toggle span:nth-child(2) { opacity: 0; }
+  .site-head.open .menu-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .site-foot { margin-top: 48px; padding: 28px 0 56px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--ink-3); }
+  .site-foot nav { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-bottom: 12px; }
+  .site-foot a { color: var(--ink-2); text-decoration: none; }
+  .site-foot a:hover { color: var(--teal); }
+  .site-foot p { margin: 0; line-height: 1.6; }
+  @media (max-width: 860px) {
+    .menu-toggle { display: flex; }
+    .site-nav { display: none; position: absolute; left: 0; right: 0; top: 72px; background: var(--paper);
+      border-bottom: 1px solid var(--rule); flex-direction: column; align-items: stretch; gap: 0;
+      padding: 8px var(--gutter) 16px; box-shadow: 0 12px 24px rgba(22,32,47,.08); }
+    .site-head.open .site-nav { display: flex; }
+    .site-nav a { padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 16px; }
+    .site-nav a:last-child { border-bottom: 0; }
+  }
+  @media (max-width: 640px) {
+    :root { --gutter: 20px; }
+  }
 </style>
 </head>
 <body>
 
-<nav>
-  <a href="/" class="logo">
-    <div class="logo-mark">T</div>
-    <span class="logo-text">Toby<span>AI</span></span>
-  </a>
-  <a href="/" class="back-link">← Back</a>
-</nav>
+<header class="site-head">
+  <div class="wrap bar">
+    <a class="brand" href="/"><span class="mark">T</span>TobyAI</a>
+    <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    <nav id="site-nav" class="site-nav">
+      <a href="/">Home</a>
+      <a href="/#coverage">Coverage</a>
+      <a href="/answers/">Answers</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/privacy.html" aria-current="page">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a class="nav-cta" href="/#signup-form">Sign up</a>
+    </nav>
+  </div>
+</header>
 
-<div class="wrap">
-  <div class="page-tag">Legal</div>
+<main class="wrap legal-wrap">
+  <p class="eyebrow">Legal</p>
   <h1>Privacy Policy</h1>
   <p class="effective">Effective 15 May 2026 &nbsp;·&nbsp; TobyAI</p>
 
@@ -77,11 +108,27 @@
   <p>To access, correct, or delete your information, email us at <a href="mailto:hello@tobyai.io">hello@tobyai.io</a>. We'll sort it promptly.</p>
 
   <p>We handle personal information in accordance with the Privacy Act 1988 (Cth).</p>
-</div>
+</main>
 
-<footer>
-  © 2026 TobyAI &nbsp;·&nbsp; <a href="/">Home</a> &nbsp;·&nbsp; <a href="/terms.html">Terms</a>
+<footer class="site-foot">
+  <div class="wrap">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#coverage">Coverage</a>
+      <a href="/answers/">Answers</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="mailto:hello@tobyai.io">hello@tobyai.io</a>
+    </nav>
+    <p>© 2026 TobyAI. Processed and held in Sydney.</p>
+  </div>
 </footer>
 
+<script>
+(function(){var h=document.querySelector('.site-head'),b=h&&h.querySelector('.menu-toggle');if(!b)return;
+b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&h.classList.contains('open')){h.classList.remove('open');b.setAttribute('aria-expanded','false');b.focus();}});})();
+</script>
 </body>
 </html>

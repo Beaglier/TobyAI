@@ -8,72 +8,100 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232a9d8f'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='20' fill='white'%3ET%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
 <script defer data-domain="tobyai.io" src="https://plausible.io/js/script.js"></script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --navy:      #1a2535;
-    --navy2:     #162030;
-    --teal:      #2a9d8f;
-    --teal2:     #21867a;
+    --navy: #1a2535;
+    --navy2: #162030;
+    --teal2: #21867a;
     --teal-glow: #5abfb3;
-    --font-head: 'Big Shoulders Display', system-ui, sans-serif;
+    --teal-light: #e8f4f2;
+    --text: #2d3748;
+    --muted: #64748b;
+    --border: #e2eaef;
+    --paper: #ffffff;
+    --rule: #e2e8e6;
+    --ink: #16202f;
+    --ink-2: #4d5a6e;
+    --ink-3: #78849a;
+    --teal: #0b7d84;
+    --gutter: 32px;
+    --sans: 'Instrument Sans', system-ui, sans-serif;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --font-head: 'Instrument Sans', system-ui, sans-serif;
     --font-body: 'Instrument Sans', system-ui, sans-serif;
   }
-  html, body { height: 100%; font-family: var(--font-body); background: var(--navy2); color: white; -webkit-font-smoothing: antialiased; }
+  html, body { min-height: 100%; font-family: var(--sans); background: var(--paper); color: var(--ink); -webkit-font-smoothing: antialiased; }
   body { display: flex; flex-direction: column; min-height: 100vh; }
-
-  .bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
-  .bg-orb { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(42,157,143,0.11) 0%, transparent 68%); width: 900px; height: 900px; top: -300px; left: 50%; transform: translateX(-50%); }
-  .bg-grid {
-    position: absolute; inset: 0;
-    background-image: linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
-    background-size: 56px 56px;
-    mask-image: radial-gradient(ellipse 70% 55% at 50% 10%, black 0%, transparent 80%);
+  .dark-panel { position: relative; flex: 1; overflow: hidden; background: #16202f; color: white; }
+  .bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+  .bg-orb { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(11,125,132,0.14) 0%, transparent 68%); width: 900px; height: 900px; top: -300px; left: 50%; transform: translateX(-50%); }
+  .bg-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(ellipse 70% 55% at 50% 10%, black 0%, transparent 80%); }
+  .dark-panel main { position: relative; z-index: 2; min-height: 440px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 60px 24px; }
+  .code { font-size: 12px; font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase; color: #5abfb3; margin-bottom: 20px; }
+  .dark-panel h1 { font-family: var(--sans); font-size: clamp(42px, 8vw, 80px); font-weight: 600; line-height: .95; letter-spacing: -.5px; color: white; margin-bottom: 18px; }
+  .dark-panel main p { font-size: 17px; color: rgba(255,255,255,.66); max-width: 420px; line-height: 1.65; margin-bottom: 40px; }
+  .btn { display: inline-block; padding: 15px 30px; border-radius: 9px; background: var(--teal); color: white; text-decoration: none; font-size: 15px; font-weight: 600; }
+  .btn:hover { background: #08666c; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 var(--gutter); }
+  .site-head { background: var(--paper); border-bottom: 1px solid var(--rule); position: relative; z-index: 10; }
+  .site-head .bar { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 24px; }
+  .brand { display: flex; align-items: center; gap: 11px; font-weight: 600; font-size: 18px; color: var(--ink); text-decoration: none; }
+  .mark { width: 28px; height: 28px; border-radius: 8px; background: var(--teal); color: white;
+    display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; }
+  .site-nav { display: flex; align-items: center; gap: 26px; font-size: 14px; }
+  .site-nav a { color: var(--ink-2); text-decoration: none; }
+  .site-nav a:hover { color: var(--teal); }
+  .site-nav a[aria-current="page"] { color: var(--ink); font-weight: 600; }
+  .site-nav .nav-cta { color: var(--teal); font-weight: 600; }
+  .menu-toggle { display: none; width: 40px; height: 40px; border: 0; background: none; padding: 8px; cursor: pointer;
+    flex-direction: column; justify-content: center; gap: 5px; }
+  .menu-toggle span { display: block; height: 2px; background: var(--ink); border-radius: 1px; transition: transform .2s, opacity .2s; }
+  .site-head.open .menu-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .site-head.open .menu-toggle span:nth-child(2) { opacity: 0; }
+  .site-head.open .menu-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .site-foot { margin-top: 48px; padding: 28px 0 56px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--ink-3); }
+  .site-foot nav { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-bottom: 12px; }
+  .site-foot a { color: var(--ink-2); text-decoration: none; }
+  .site-foot a:hover { color: var(--teal); }
+  .site-foot p { margin: 0; line-height: 1.6; }
+  @media (max-width: 860px) {
+    .menu-toggle { display: flex; }
+    .site-nav { display: none; position: absolute; left: 0; right: 0; top: 72px; background: var(--paper);
+      border-bottom: 1px solid var(--rule); flex-direction: column; align-items: stretch; gap: 0;
+      padding: 8px var(--gutter) 16px; box-shadow: 0 12px 24px rgba(22,32,47,.08); }
+    .site-head.open .site-nav { display: flex; }
+    .site-nav a { padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 16px; }
+    .site-nav a:last-child { border-bottom: 0; }
   }
-
-  nav { position: relative; z-index: 2; padding: 20px 32px; display: flex; align-items: center; gap: 10px; }
-  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .logo-mark {
-    width: 34px; height: 34px; border-radius: 9px;
-    background: linear-gradient(135deg, #2a9d8f, #21867a);
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--font-head); font-weight: 900; font-size: 18px; color: white;
-    box-shadow: 0 0 0 1px rgba(42,157,143,0.35), 0 4px 14px rgba(42,157,143,0.2);
+  @media (max-width: 640px) {
+    :root { --gutter: 20px; }
   }
-  .logo-text { font-family: var(--font-head); font-weight: 800; font-size: 20px; color: white; letter-spacing: -0.5px; }
-  .logo-text span { color: var(--teal-glow); }
-
-  main { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 60px 24px; }
-  .code { font-size: 12px; font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase; color: var(--teal-glow); margin-bottom: 20px; }
-  h1 { font-family: var(--font-head); font-size: clamp(42px, 8vw, 80px); font-weight: 900; line-height: 0.95; letter-spacing: -2px; color: white; margin-bottom: 18px; }
-  p { font-size: 16px; font-weight: 500; color: rgba(255,255,255,0.4); max-width: 420px; line-height: 1.65; margin-bottom: 40px; }
-  .btn {
-    display: inline-block; padding: 15px 30px; border-radius: 9px;
-    background: var(--teal); color: white; text-decoration: none;
-    font-size: 15px; font-weight: 700; font-family: var(--font-body);
-    transition: all 0.2s; box-shadow: 0 4px 20px rgba(42,157,143,0.35);
-  }
-  .btn:hover { background: var(--teal2); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(42,157,143,0.45); }
-
-  footer { position: relative; z-index: 2; margin-top: auto; text-align: center; padding: 24px; font-size: 12px; color: rgba(255,255,255,0.2); }
-  footer a { color: var(--teal-glow); text-decoration: none; }
-  footer a:hover { color: white; }
 </style>
 </head>
 <body>
+<header class="site-head">
+  <div class="wrap bar">
+    <a class="brand" href="/"><span class="mark">T</span>TobyAI</a>
+    <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    <nav id="site-nav" class="site-nav">
+      <a href="/">Home</a>
+      <a href="/#coverage">Coverage</a>
+      <a href="/answers/">Answers</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a class="nav-cta" href="/#signup-form">Sign up</a>
+    </nav>
+  </div>
+</header>
+<div class="dark-panel">
 <div class="bg">
   <div class="bg-orb"></div>
   <div class="bg-grid"></div>
 </div>
-
-<nav>
-  <a href="/" class="logo">
-    <div class="logo-mark">T</div>
-    <span class="logo-text">Toby<span>AI</span></span>
-  </a>
-</nav>
 
 <main>
   <div class="code">404</div>
@@ -81,12 +109,26 @@
   <p>The page you're after doesn't exist or has moved. Let's get you back on track.</p>
   <a href="/" class="btn">← Back to home</a>
 </main>
+</div>
 
-<footer>
-  <a href="mailto:hello@tobyai.io">hello@tobyai.io</a>
-  &nbsp;·&nbsp; <a href="/privacy.html">Privacy</a>
-  &nbsp;·&nbsp; <a href="/terms.html">Terms</a>
-  &nbsp;·&nbsp; © 2026 TobyAI
+<footer class="site-foot">
+  <div class="wrap">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#coverage">Coverage</a>
+      <a href="/answers/">Answers</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="mailto:hello@tobyai.io">hello@tobyai.io</a>
+    </nav>
+    <p>© 2026 TobyAI. Processed and held in Sydney.</p>
+  </div>
 </footer>
+<script>
+(function(){var h=document.querySelector('.site-head'),b=h&&h.querySelector('.menu-toggle');if(!b)return;
+b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&h.classList.contains('open')){h.classList.remove('open');b.setAttribute('aria-expanded','false');b.focus();}});})();
+</script>
 </body>
 </html>
