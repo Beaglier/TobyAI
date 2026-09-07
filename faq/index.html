@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frequently asked questions | TobyAI</title>
+  <meta name="description" content="What TobyAI is, how it works beside Xero, MYOB and payroll software, the tools that check your data against the law, where each figure comes from, and what it refuses to answer.">
+  <link rel="canonical" href="https://www.tobyai.io/faq/">
+  <meta property="og:title" content="Frequently asked questions | TobyAI">
+  <meta property="og:description" content="What TobyAI is, how it works beside Xero, MYOB and payroll software, the tools that check your data against the law, where each figure comes from, and what it refuses to answer.">
+  <meta property="og:url" content="https://www.tobyai.io/faq/">
+  <meta property="og:image" content="https://www.tobyai.io/toby_logo_1024.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #16202f; --ink: #16202f; --ink-2: #4d5a6e; --ink-3: #78849a;
+    --paper: #ffffff; --shell: #f5f8f7; --rule: #e2e8e6;
+    --teal: #0b7d84; --teal-display: #0e9aa0; --teal-d: #08666c;
+    --sans: 'Instrument Sans', system-ui, sans-serif;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --gutter: 32px;
+  }
+  body { font-family: var(--sans); background: var(--paper); color: var(--ink);
+    -webkit-font-smoothing: antialiased; line-height: 1.55; }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 var(--gutter); }
+  .bar { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .brand { display: flex; align-items: center; gap: 11px; font-weight: 600; font-size: 18px;
+    color: var(--ink); text-decoration: none; }
+  .mark { width: 28px; height: 28px; border-radius: 8px; background: var(--teal); color: white;
+    display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; }
+  .bar nav { font-size: 14px; color: var(--ink-3); }
+  .bar nav a { color: var(--ink-3); text-decoration: none; }
+  .bar nav a:hover { color: var(--teal); }
+  .hero { padding-block: 54px 36px; }
+  .hero > * { max-width: 760px; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--teal); margin-bottom: 14px; }
+  h1 { font-size: clamp(31px, 3.8vw, 42px); font-weight: 600; line-height: 1.16;
+    letter-spacing: -0.9px; color: var(--ink); }
+  .lede { font-family: var(--serif); font-size: 19px; line-height: 1.6; color: var(--ink-2);
+    margin-top: 18px; max-width: 40em; }
+  .layout { display: grid; grid-template-columns: 220px 1fr; gap: 48px; align-items: start; }
+  .toc { position: sticky; top: 24px; }
+  .band-label { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-3); margin-bottom: 12px; }
+  .toc a { display: block; font-size: 14px; color: var(--ink-2); text-decoration: none;
+    padding: 6px 0 6px 12px; border-left: 2px solid var(--rule); }
+  .toc a:hover { color: var(--teal); border-left-color: var(--teal); }
+  .group { margin-bottom: 44px; }
+  .group h2 { font-size: 22px; font-weight: 600; letter-spacing: -0.4px; color: var(--ink);
+    padding-bottom: 12px; border-bottom: 1px solid var(--rule); margin-bottom: 8px; }
+  .qa { padding: 20px 0; border-bottom: 1px solid var(--rule); }
+  .qa:last-child { border-bottom: 0; }
+  .qa h3 { font-size: 17px; font-weight: 600; line-height: 1.35; color: var(--ink); margin-bottom: 8px; }
+  .qa h3 a { text-decoration: none; color: inherit; }
+  .qa h3 a:hover { color: var(--teal); }
+  .qa p { font-size: 15.5px; line-height: 1.65; color: var(--ink-2); max-width: 44em; }
+  .qa p + p { margin-top: 10px; }
+  .qa ul { margin: 10px 0; padding-left: 22px; max-width: 44em; }
+  .qa li { font-size: 15.5px; line-height: 1.65; color: var(--ink-2); margin-bottom: 6px; }
+  .qa p a { color: var(--teal); text-decoration: none; }
+  .qa p a:hover { text-decoration: underline; }
+  .compare { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 14.5px; max-width: 44em; }
+  .compare th, .compare td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule); }
+  .compare th { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+  .compare td:first-child { color: var(--ink); font-weight: 600; width: 34%; }
+  .compare td { color: var(--ink-2); line-height: 1.55; }
+  .compare tr:last-child td { border-bottom: 0; }
+  .cta { margin-top: 12px; background: var(--navy); color: white; border-radius: 12px;
+    padding: 26px 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .cta h2 { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+  .cta p { font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.66); max-width: 44em; }
+  .btn { flex: none; padding: 12px 20px; border-radius: 8px; background: var(--teal); color: white;
+    font-size: 15px; font-weight: 600; text-decoration: none; }
+  .btn:hover { background: var(--teal-d); }
+  footer { margin-top: 32px; padding: 24px 0 48px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--ink-3); }
+  footer a { color: var(--ink-2); text-decoration: none; }
+  footer a:hover { color: var(--teal); }
+  @media (max-width: 860px) {
+    .layout { grid-template-columns: 1fr; gap: 28px; }
+    .toc { position: static; }
+    .cta { flex-direction: column; align-items: flex-start; }
+    .hero { padding-block: 40px 28px; }
+    .bar nav { display: none; }
+  }
+  @media (max-width: 640px) {
+    :root { --gutter: 20px; }
+    .compare td:first-child { width: 40%; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What is TobyAI?", "acceptedAnswer": {"@type": "Answer", "text": "TobyAI holds current Australian Commonwealth and state tax and employment law as one versioned, cited body, and computes what each obligation means for a specific business in auditable code. Every figure shows its working and cites the provision. It sits beside your accounting and payroll software; it is not a replacement for either."}},
+    {"@type": "Question", "name": "Is TobyAI a replacement for Xero or MYOB?", "acceptedAnswer": {"@type": "Answer", "text": "No. TobyAI keeps no ledger and writes nothing to yours. It reads figures from your accounting file or an export and checks them against the law in force on that date. Keep your accounting software; TobyAI sits beside it."}},
+    {"@type": "Question", "name": "Does TobyAI run payroll or lodge with the ATO?", "acceptedAnswer": {"@type": "Answer", "text": "No. It checks that the super rate, PAYG scale, payroll tax threshold, due dates and award rates your payroll uses are the ones the law provides on that date, and shows where the law says so. You or your registered agent lodge."}},
+    {"@type": "Question", "name": "Is this tax, legal or financial advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. TobyAI states what the legislation, the revenue office or the award provides and what your figures compute to under it. It is information, not tax, legal, financial or employment advice, and the Terms of Use say so. A qualified person decides what to do with it."}},
+    {"@type": "Question", "name": "What tooling is there, beyond looking up the law?", "acceptedAnswer": {"@type": "Answer", "text": "More than thirty deterministic tools: data-health checks over an accounting file, payroll and BAS reconciliations, calculators for payroll tax, super, FBT and termination, obligation checklists and a research surface. Each reads your data, checks it against the law in force and cites the provision for every finding."}},
+    {"@type": "Question", "name": "Where does a figure come from?", "acceptedAnswer": {"@type": "Answer", "text": "From a versioned schedule that names its source and the date it was checked, attested by a named Compliance Lead. The engine computes the figure in code and shows the working. No AI model originates a rate, threshold, date, classification or legal position."}},
+    {"@type": "Question", "name": "Which law does TobyAI hold?", "acceptedAnswer": {"@type": "Answer", "text": "One central hub across the compliance surface at Commonwealth and state level: income tax, GST, PAYG, super and FBT; every state's payroll tax Act and published rates; the Fair Work Act and the awards; work health and safety, privacy, AML/CTF, Corporations Act and consumer law. More than three thousand documents held as the published text, every paragraph traceable to its publisher."}},
+    {"@type": "Question", "name": "Where is my data?", "acceptedAnswer": {"@type": "Answer", "text": "Processed and held in Sydney, encrypted at rest and in transit. No name, tax file number, bank detail or salary reaches an AI provider; identifiers are hashed before anything leaves the deterministic layer, and nothing you send is used to train a model."}}
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap bar">
+  <a class="brand" href="/"><span class="mark">T</span> TobyAI</a>
+  <nav><a href="/#coverage">Coverage</a> &nbsp;·&nbsp; <a href="/answers/">Answers</a> &nbsp;·&nbsp; <a href="/faq/">FAQ</a> &nbsp;·&nbsp; <a href="/#signup-form">Sign up</a></nav>
+</div>
+<div class="wrap hero">
+  <p class="eyebrow">Frequently asked questions</p>
+  <h1>The law beside your ledger, and the tools to check your data against it</h1>
+  <p class="lede">Your accounting and payroll software records what happened and pays people on time. TobyAI holds the law those figures have to meet, and more than thirty tools that read your data and check it against that law, finding by finding, with the provision cited. These are the questions accountants and bookkeepers ask before they trust it.</p>
+</div>
+
+<div class="wrap layout">
+  <aside class="toc">
+    <p class="band-label">On this page</p>
+    <a href="#what">What TobyAI is</a>
+    <a href="#software">Working with Xero, MYOB and payroll</a>
+    <a href="#tooling">Checking and verifying your data</a>
+    <a href="#figures">Where the figures come from</a>
+    <a href="#law">The law it holds</a>
+    <a href="#data">Data and security</a>
+    <a href="#access">Access and cost</a>
+  </aside>
+
+  <main>
+    <section class="group" id="what">
+      <h2>What TobyAI is</h2>
+
+      <div class="qa" id="what-is-tobyai">
+        <h3><a href="#what-is-tobyai">What is TobyAI?</a></h3>
+        <p>Two things that only work together. One is a consolidated body of Australian compliance law, Commonwealth and state, from income tax, GST, PAYG and super through payroll tax and the FairWork awards to work health and safety, privacy and ASIC obligations, held as one versioned, cited corpus. The other is the tooling that reads your data and checks it against that law: data-quality checks over an accounting file, payroll and BAS reconciliations, obligation checklists, calculators and a research surface that answers from the provision. Every figure shows its working and cites the source it rests on.</p>
+        <p>It is not accounting software, not a payroll system and not a lodgement service. It is the thing you reach for when the question is whether the figure your software holds is the one the law requires.</p>
+      </div>
+
+      <div class="qa" id="who-is-it-for">
+        <h3><a href="#who-is-it-for">Who is it for?</a></h3>
+        <p>Bookkeepers and accountants who need to stand behind a number for a client, and the businesses they act for, especially those employing across state lines. If you have ever kept a spreadsheet of thresholds, rates and due dates beside your accounting software, TobyAI replaces the spreadsheet and adds the citation.</p>
+      </div>
+
+      <div class="qa" id="is-this-advice">
+        <h3><a href="#is-this-advice">Is this tax, legal or financial advice?</a></h3>
+        <p>No. TobyAI states what the legislation, the revenue office or the award provides, and what your figures compute to under it. That is information, not tax, legal, financial or employment advice, and the <a href="/terms.html">Terms of Use</a> say so. A qualified person decides what to do with it. For a registered agent that means TobyAI does the finding and the arithmetic; the professional judgement, and the sign-off, stay with you.</p>
+      </div>
+
+      <div class="qa" id="how-different">
+        <h3><a href="#how-different">How is this different from asking a chatbot, or searching the ATO site?</a></h3>
+        <p>A general chatbot writes the number. TobyAI never does. Rates, thresholds, dates and caps live in versioned schedules that name their source and the date they were checked, and the engine computes from those in code. AI is used only to explain a computed result in plain language and to help you frame the question; it cannot change a figure, add a rate or take a legal position.</p>
+        <p>Searching the ATO or a revenue office finds you the page. TobyAI finds the provision, applies it to your figures, tells you which version of the law it used and gives you a record you can file. And where it does not hold the source, it says so rather than filling the gap.</p>
+      </div>
+    </section>
+
+    <section class="group" id="software">
+      <h2>Working with Xero, MYOB and payroll software</h2>
+
+      <div class="qa" id="replace-xero">
+        <h3><a href="#replace-xero">Is TobyAI a replacement for Xero or MYOB?</a></h3>
+        <p>No. TobyAI keeps no ledger and writes nothing to yours. It reads figures from your accounting file or an export and checks them against the law in force on the date in question. Keep your accounting software; TobyAI sits beside it and does the part it was never built to do.</p>
+        <table class="compare">
+          <thead><tr><th>They do</th><th>TobyAI does</th></tr></thead>
+          <tbody>
+            <tr><td>Xero, MYOB: record transactions, reconcile, report</td><td>Read the figures and check them against the Act, the revenue office's published rate and the award clause, with the citation</td></tr>
+            <tr><td>Payroll systems: calculate and pay wages, super and PAYG from their tables</td><td>Confirm the rate, threshold, due date and award classification the tables should be using on that date, and say where the law provides it</td></tr>
+            <tr><td>Your accountant or registered agent: advise and lodge</td><td>Hand them the working, the provision and the schedule version to stand behind</td></tr>
+            <tr><td>Your review checklist and the spreadsheet of thresholds beside it</td><td>Run the checks itself, over the real data, and record what it found and what it rested on</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="qa" id="run-payroll">
+        <h3><a href="#run-payroll">Does TobyAI run payroll?</a></h3>
+        <p>No. It checks that the super guarantee rate, the PAYG scale, the payroll tax threshold, the due dates and the award rates your payroll uses are the ones the law provides on that pay date, and shows where the law says so. Paying people stays with your payroll system.</p>
+      </div>
+
+      <div class="qa" id="lodge">
+        <h3><a href="#lodge">Does TobyAI lodge with the ATO or a revenue office?</a></h3>
+        <p>No. TobyAI prepares and checks. You or your registered agent lodge, as you do today.</p>
+      </div>
+
+      <div class="qa" id="xero-read">
+        <h3><a href="#xero-read">What does TobyAI read from Xero, and can it change anything?</a></h3>
+        <p>Read-only accounting data, authorised by you in Xero, read server side in Sydney. The free health check reports what in the file would not survive review, with each finding cited. TobyAI never writes to your Xero file, and you can revoke its access in Xero at any time.</p>
+      </div>
+
+      <div class="qa" id="other-software">
+        <h3><a href="#other-software">My clients use MYOB, QuickBooks or another payroll system. Does it still work?</a></h3>
+        <p>Yes, by file. Export the report or payroll data from the software and attach it in the portal; the same engine audits it against the same sources and shows each finding with its citation. Xero connects directly today; direct connections to other ledgers and payroll systems follow.</p>
+      </div>
+
+      <div class="qa" id="for-practices">
+        <h3><a href="#for-practices">How does it fit into a bookkeeping or accounting practice?</a></h3>
+        <p>As the check before the figure goes out. Run a client's payroll period, BAS or year-end figures through it and get back the items that do not match the law in force, each with the provision, the working and the schedule version. That is the file note. Clients are served from the same portal, and the answer they receive is the one you would have had to look up.</p>
+      </div>
+    </section>
+
+    <section class="group" id="tooling">
+      <h2>Checking and verifying your data</h2>
+
+      <div class="qa" id="what-tools">
+        <h3><a href="#what-tools">What tooling is there, beyond looking up the law?</a></h3>
+        <p>More than thirty tools, each one deterministic and each one citing what it rested on. They fall into four kinds:</p>
+        <ul>
+          <li><strong>Data health.</strong> Reads an accounting file and reports what would not survive review: duplicate contacts, dormant accounts, stale bank feeds, aged unreconciled transactions, contact ABNs that do not match the ABR.</li>
+          <li><strong>Reconciliation and close.</strong> Payroll close, STP finalisation against the ledger, BAS label checks, TPAR, month-end close progress, receivables ageing.</li>
+          <li><strong>Calculation.</strong> Payroll tax by state, super guarantee and payday readiness, FBT, termination and redundancy, depreciation, Div 7A, PSI, and a forward tax position, each from a versioned schedule that says whether it is attested.</li>
+          <li><strong>Obligations and research.</strong> Due dates from the tax calendar, obligation checklists across privacy, AML/CTF, information security and ASIC director duties, and a research surface that answers a question from the provision itself.</li>
+        </ul>
+        <p>The law and the tooling are the same product on purpose: a check is only worth running if it can tell you which provision it failed against.</p>
+      </div>
+
+      <div class="qa" id="health-check">
+        <h3><a href="#health-check">What does the free Xero health check actually look at?</a></h3>
+        <p>It reads the accounting data you authorise, read-only, and returns a list of findings rather than a score: duplicate and near-duplicate contacts, contact ABNs that fail the check digit or repeat across contacts, dormant accounts, missing or inconsistent tax codes, transactions coded to the wrong account, and transactions left unreconciled past their age. Each finding says what it found, where, and why it matters. Nothing is written back to your file.</p>
+      </div>
+
+      <div class="qa" id="spreadsheet">
+        <h3><a href="#spreadsheet">Can I hand it a spreadsheet or an export instead of connecting anything?</a></h3>
+        <p>Yes. Attach a spreadsheet, a payroll export or a document in the portal and the same engines audit it against the same primary sources. If the workbook cannot be read honestly, for instance the columns cannot be identified with confidence, it is refused rather than guessed at. That is how MYOB, QuickBooks and other payroll systems are supported today, while Xero connects directly.</p>
+      </div>
+
+      <div class="qa" id="verify">
+        <h3><a href="#verify">How is this different from the checks my software already runs?</a></h3>
+        <p>Your software checks itself against its own rules and its own tables. TobyAI checks it against the law: it re-derives the figure from the Act, the revenue office's published rate or the award clause on the date in question, and compares. When the two disagree, you get the difference, the provision and the working, not a warning icon.</p>
+      </div>
+
+      <div class="qa" id="file-note">
+        <h3><a href="#file-note">What do I get at the end of a run?</a></h3>
+        <p>The answer, the working in cents, the citation for each figure, the version of the schedule used and the date its source was checked. Every run is recorded, so months later you can show what was asked, what the law said then, and what the tool returned. That is the point of the audit trail: not that the tool was confident, but that its answer can be re-derived.</p>
+      </div>
+
+      <div class="qa" id="tool-refuse">
+        <h3><a href="#tool-refuse">Will a tool ever give me a figure it cannot support?</a></h3>
+        <p>No. A tool whose schedule is not attested, or whose source has not been published for the period asked, refuses and says which input it is missing. Judgement calls, whether entities are grouped, whether someone is a contractor, are put to you with the test and its citation, and the figure is computed only after you record the decision.</p>
+      </div>
+    </section>
+
+    <section class="group" id="figures">
+      <h2>Where the figures come from</h2>
+
+      <div class="qa" id="where-number">
+        <h3><a href="#where-number">Where does a number come from?</a></h3>
+        <p>From a versioned schedule that names its source (the Act, the ATO page, the revenue office page, the Fair Work Commission's data) and the date it was checked, attested by a named Compliance Lead before it is used. The engine reads the schedule and computes the figure with the working shown in cents. You can read the schedule and check it against the source yourself.</p>
+      </div>
+
+      <div class="qa" id="ai-role">
+        <h3><a href="#ai-role">What does AI actually do, then?</a></h3>
+        <p>It explains the computed answer in plain language and helps you ask the right question. It never originates a rate, threshold, date, classification or legal position, and the engine that computes figures contains no AI at all. That boundary is enforced in code and tested on every change, not stated as a policy.</p>
+      </div>
+
+      <div class="qa" id="accuracy">
+        <h3><a href="#accuracy">How do I know a figure is right?</a></h3>
+        <p>Three ways. The working is shown, so you can follow it. The source is cited and linked, so you can read the provision or the published rate yourself. And the engine is held to the worked examples the publishers print, so a Revenue NSW or SRO Victoria example computes to the publisher's own answer before a change ships. Each answer also states whether the schedule behind it is attested.</p>
+      </div>
+
+      <div class="qa" id="judgement">
+        <h3><a href="#judgement">What about questions that are a judgement call?</a></h3>
+        <p>Employee or contractor, whether entities are grouped, whether a position is reasonably arguable: TobyAI surfaces the test and its citation and stops. A person records the decision, and the evidence they saw, before any figure is computed on it. The decision is logged as an input, never inferred or pre-filled.</p>
+      </div>
+
+      <div class="qa" id="no-answer">
+        <h3><a href="#no-answer">What happens when TobyAI does not have the answer?</a></h3>
+        <p>It says so. A state it does not compute, a rate the ATO has not yet published, a compilation it does not hold for the date asked: each is refused, or handed back with the test and the citation, rather than filled with an estimate that looks right.</p>
+      </div>
+    </section>
+
+    <section class="group" id="law">
+      <h2>The law it holds</h2>
+
+      <div class="qa" id="what-law">
+        <h3><a href="#what-law">Which law does TobyAI hold?</a></h3>
+        <p>One central hub for the obligations a business and its advisers have to meet, at Commonwealth and state level, across the whole compliance surface rather than one corner of it:</p>
+        <ul>
+          <li><strong>Commonwealth tax.</strong> Income tax, GST, PAYG withholding and instalments, super guarantee, FBT, Div 7A, PSI and the administration Acts, as Federal Register compilations, with the ATO's published rates, guidance and rulings beside them.</li>
+          <li><strong>State and territory revenue.</strong> The payroll tax Act of every state and territory, the revenue offices' published rates, thresholds and worked examples, long service leave and workers' compensation Acts.</li>
+          <li><strong>Employment.</strong> The Fair Work Act and the National Employment Standards, the FairWork awards with their classifications, rates and allowances, and the Fair Work Commission's published data.</li>
+          <li><strong>The wider regulatory surface.</strong> Work health and safety Acts in each jurisdiction, the Privacy Act, AML/CTF, the Corporations Act and ASIC obligations, competition and consumer law, modern slavery, prudential and accounting standards.</li>
+        </ul>
+        <p>More than three thousand documents, held as the published text with every paragraph traceable to its publisher, so a citation points at the provision as it stood, not a paraphrase. Bringing them into one place is the point: an obligation missed is usually one that lived in a source nobody was watching. What is computed, and what is held for research and citation only, is set out on the <a href="/#coverage">coverage pages</a>.</p>
+      </div>
+
+      <div class="qa" id="prior-year">
+        <h3><a href="#prior-year">Can I ask about a prior year?</a></h3>
+        <p>Yes. Ask as at a date and TobyAI answers on the law in force then, naming the compilation or schedule it used. Amended returns, audits and late lodgements are answered on the law of the day, not today's rates.</p>
+      </div>
+
+      <div class="qa" id="current">
+        <h3><a href="#current">How current is it?</a></h3>
+        <p>Legislation and published rates are refreshed on a schedule against their publishers, and each document carries the date the publisher printed and the date it was retrieved. A change to a figure goes through the Compliance Lead's attestation before the engine uses it. Where a publisher has not yet printed a figure, such as a quarterly interest rate the ATO has not released, TobyAI says the figure is not yet held.</p>
+      </div>
+
+      <div class="qa" id="states">
+        <h3><a href="#states">Which states and territories are covered?</a></h3>
+        <p>Commonwealth law applies everywhere. Payroll tax computes for Queensland, New South Wales and Victoria today; the other states' and territories' Acts are held for research, and a question that needs a figure for one of them is refused rather than approximated.</p>
+      </div>
+    </section>
+
+    <section class="group" id="data">
+      <h2>Data and security</h2>
+
+      <div class="qa" id="where-data">
+        <h3><a href="#where-data">Where is my data, and my clients' data?</a></h3>
+        <p>In Sydney, and it stays there. Compute, the database, the encrypted store for connection tokens and the operational logs all run in the AWS Sydney region, with data encrypted at rest and in transit. The AI models the assistant uses run in Australia too, on AWS Bedrock. The <a href="/privacy.html">privacy policy</a> sets this out.</p>
+      </div>
+
+      <div class="qa" id="pii-ai">
+        <h3><a href="#pii-ai">What does AI actually see?</a></h3>
+        <p>Never the personal information. Tax file numbers, bank account numbers, salary figures, employee names and raw organisation identifiers do not reach an AI provider. Before anything leaves the deterministic layer, identifiers are replaced with a salted hash unique to your organisation and the record is reduced to the non-personal shape the explanation needs: an account code, a label, a computed figure. That boundary is held by automated checks that run on every change to the code, not by a policy document.</p>
+      </div>
+
+      <div class="qa" id="no-training">
+        <h3><a href="#no-training">Is my data used to train AI?</a></h3>
+        <p>No. Nothing you send, upload or connect is used to train, fine-tune or otherwise update any model, ours or a provider's. AI runs as a fixed, measured model that receives a de-identified view at the moment it runs and retains nothing from it. Your data is not sold or shared with a third party for their own use.</p>
+      </div>
+
+      <div class="qa" id="who-sees">
+        <h3><a href="#who-sees">Who can see my organisation's data?</a></h3>
+        <p>The people you add to your organisation, and no other customer. Every record is siloed to your organisation; nothing is pooled across customers or shown to another. Sign-in is through your identity provider, connections such as Xero are read-only and revocable by you at any time, and the API refuses any tool call until the current Terms of Use have been accepted by your organisation.</p>
+      </div>
+
+      <div class="qa" id="record">
+        <h3><a href="#record">Can I keep a record of what it told me?</a></h3>
+        <p>Yes. Each answer carries the schedule version, the source, the provision and a fingerprint of the assessment, so a file note can be reconstructed later and the provision reread as it stood.</p>
+      </div>
+    </section>
+
+    <section class="group" id="access">
+      <h2>Access and cost</h2>
+
+      <div class="qa" id="cost">
+        <h3><a href="#cost">What does it cost?</a></h3>
+        <p>The Xero health check is free. Pricing for the rest is published before general access, and early-access users are told first.</p>
+      </div>
+
+      <div class="qa" id="get-access">
+        <h3><a href="#get-access">How do I get access?</a></h3>
+        <p>Sign up on the <a href="/#signup-form">home page</a>. Access is limited while the first businesses and their advisers are onboarded; you get a receipt now and an email when your place is ready.</p>
+      </div>
+
+      <div class="qa" id="something-else">
+        <h3><a href="#something-else">I have a question that is not here.</a></h3>
+        <p>Write to <a href="mailto:hello@tobyai.io">hello@tobyai.io</a>. A person reads it.</p>
+      </div>
+    </section>
+
+    <div class="cta">
+      <div>
+        <h2>Ask it about your own numbers</h2>
+        <p>TobyAI is in limited early access. Sign up and we will write to you when your place is ready.</p>
+      </div>
+      <a class="btn" href="/#signup-form">Sign up now</a>
+    </div>
+  </main>
+</div>
+
+<footer class="wrap">
+  <a href="/">TobyAI</a> &nbsp;·&nbsp; <a href="/answers/">Answers</a> &nbsp;·&nbsp; <a href="/faq/">FAQ</a> &nbsp;·&nbsp;
+  <a href="/privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="/terms.html">Terms</a>
+  &nbsp;·&nbsp; Processed in Sydney. Page updated 7 September 2026.
+</footer>
+</body>
+</html>
